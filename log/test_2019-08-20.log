@@ -1,0 +1,216 @@
+2019-08-20 15:53:32.216 | INFO     | public.mytest:setUp:17 - ********MyTicket类用例开始***********
+2019-08-20 15:53:32.225 | INFO     | test_ticket:test_cannelorder:31 - 调用cannelOrder类接口，发送参数：123456
+2019-08-20 15:53:32.230 | ERROR    | test_ticket:test_cannelorder:36 - fail，错误：exception ::ticket::TestException
+{
+    code = 1002
+    msg = 哈哈，异常了
+}
+2019-08-20 15:53:32.232 | INFO     | public.mytest:tearDown:22 - ********MyTicket类用例结束***********
+2019-08-20 15:53:32.232 | INFO     | public.mytest:setUp:17 - ********MyTicket类用例开始***********
+2019-08-20 15:53:32.237 | INFO     | test_ticket:test_createorder:11 - 连接 ticketOrderIce:default -h 172.16.0.8 -p 11000 服务
+2019-08-20 15:53:32.238 | INFO     | test_ticket:test_createorder:18 - 调用createOrder类接口，发送参数：{"orderId": 333, "phone": "13028812388", "orderNum": "0182", "orderDate": 20190819, "ticketType": 1, "amount": 3.8, "orderStatus": 1}
+2019-08-20 15:53:32.243 | INFO     | test_ticket:test_createorder:21 - success，返回：True
+2019-08-20 15:53:32.245 | INFO     | public.mytest:tearDown:22 - ********MyTicket类用例结束***********
+2019-08-20 15:53:32.245 | INFO     | public.mytest:setUp:17 - ********MyTicket类用例开始***********
+2019-08-20 15:53:32.251 | INFO     | test_ticket:test_queryphone:43 - 调用cannelOrder类接口，发送参数：13028812388
+2019-08-20 15:53:32.254 | INFO     | test_ticket:test_queryphone:46 - success，返回：[
+{
+    orderId = 20190705001
+    phone = 18823775010
+    orderNum = 20190705001
+    orderDate = 1566287625137
+    ticketType = 1
+    amount = 6.66
+    orderStatus = 1
+}]
+2019-08-20 15:53:32.256 | INFO     | public.mytest:tearDown:22 - ********MyTicket类用例结束***********
+2019-08-20 15:54:28.289 | INFO     | public.mytest:setUp:30 - ********MySms类用例开始***********
+2019-08-20 15:54:28.296 | INFO     | test_sms:test_send_sms:11 - 调用cannelOrder类接口，发送参数：你好
+2019-08-20 15:54:28.297 | INFO     | test_sms:test_send_sms:14 - success，返回：None
+2019-08-20 15:54:28.299 | INFO     | public.mytest:tearDown:35 - ********MySms类用例结束***********
+2019-08-20 15:54:28.300 | INFO     | public.mytest:setUp:17 - ********MyTicket类用例开始***********
+2019-08-20 15:54:28.305 | INFO     | test_ticket:test_cannelorder:31 - 调用cannelOrder类接口，发送参数：123456
+2019-08-20 15:54:28.307 | ERROR    | test_ticket:test_cannelorder:36 - fail，错误：exception ::ticket::TestException
+{
+    code = 1002
+    msg = 哈哈，异常了
+}
+2019-08-20 15:54:28.308 | INFO     | public.mytest:tearDown:22 - ********MyTicket类用例结束***********
+2019-08-20 15:54:28.309 | INFO     | public.mytest:setUp:17 - ********MyTicket类用例开始***********
+2019-08-20 15:54:28.314 | INFO     | test_ticket:test_createorder:11 - 连接 ticketOrderIce:default -h 172.16.0.8 -p 11000 服务
+2019-08-20 15:54:28.314 | INFO     | test_ticket:test_createorder:18 - 调用createOrder类接口，发送参数：{"orderId": 333, "phone": "13028812388", "orderNum": "0182", "orderDate": 20190819, "ticketType": 1, "amount": 3.8, "orderStatus": 1}
+2019-08-20 15:54:28.316 | INFO     | test_ticket:test_createorder:21 - success，返回：True
+2019-08-20 15:54:28.318 | INFO     | public.mytest:tearDown:22 - ********MyTicket类用例结束***********
+2019-08-20 15:54:28.318 | INFO     | public.mytest:setUp:17 - ********MyTicket类用例开始***********
+2019-08-20 15:54:28.323 | INFO     | test_ticket:test_queryphone:43 - 调用cannelOrder类接口，发送参数：13028812388
+2019-08-20 15:54:28.325 | INFO     | test_ticket:test_queryphone:46 - success，返回：[
+{
+    orderId = 20190705001
+    phone = 18823775010
+    orderNum = 20190705001
+    orderDate = 1566287681208
+    ticketType = 1
+    amount = 6.66
+    orderStatus = 1
+}]
+2019-08-20 15:54:28.327 | INFO     | public.mytest:tearDown:22 - ********MyTicket类用例结束***********
+2019-08-20 15:54:50.323 | INFO     | public.mytest:setUp:30 - ********MySms类用例开始***********
+2019-08-20 15:54:50.330 | INFO     | test_sms:test_send_sms:11 - 调用cannelOrder类接口，发送参数：你好
+2019-08-20 15:54:50.332 | INFO     | test_sms:test_send_sms:14 - success，返回：None
+2019-08-20 15:54:50.335 | INFO     | public.mytest:tearDown:35 - ********MySms类用例结束***********
+2019-08-20 15:54:50.336 | INFO     | public.mytest:setUp:17 - ********MyTicket类用例开始***********
+2019-08-20 15:54:50.340 | INFO     | test_ticket:test_cannelorder:31 - 调用cannelOrder类接口，发送参数：123456
+2019-08-20 15:54:50.342 | ERROR    | test_ticket:test_cannelorder:36 - fail，错误：exception ::ticket::TestException
+{
+    code = 1002
+    msg = 哈哈，异常了
+}
+2019-08-20 15:54:50.344 | INFO     | public.mytest:tearDown:22 - ********MyTicket类用例结束***********
+2019-08-20 15:54:50.345 | INFO     | public.mytest:setUp:17 - ********MyTicket类用例开始***********
+2019-08-20 15:54:50.350 | INFO     | test_ticket:test_createorder:11 - 连接 ticketOrderIce:default -h 172.16.0.8 -p 11000 服务
+2019-08-20 15:54:50.351 | INFO     | test_ticket:test_createorder:18 - 调用createOrder类接口，发送参数：{"orderId": 333, "phone": "13028812388", "orderNum": "0182", "orderDate": 20190819, "ticketType": 1, "amount": 3.8, "orderStatus": 1}
+2019-08-20 15:54:50.353 | INFO     | test_ticket:test_createorder:21 - success，返回：True
+2019-08-20 15:54:50.355 | INFO     | public.mytest:tearDown:22 - ********MyTicket类用例结束***********
+2019-08-20 15:54:50.356 | INFO     | public.mytest:setUp:17 - ********MyTicket类用例开始***********
+2019-08-20 15:54:50.361 | INFO     | test_ticket:test_queryphone:43 - 调用queryByPhone类接口，发送参数：13028812388
+2019-08-20 15:54:50.363 | INFO     | test_ticket:test_queryphone:46 - success，返回：[
+{
+    orderId = 20190705001
+    phone = 18823775010
+    orderNum = 20190705001
+    orderDate = 1566287703245
+    ticketType = 1
+    amount = 6.66
+    orderStatus = 1
+}]
+2019-08-20 15:54:50.365 | INFO     | public.mytest:tearDown:22 - ********MyTicket类用例结束***********
+2019-08-20 15:55:26.833 | INFO     | public.mytest:setUp:30 - ********MySms类用例开始***********
+2019-08-20 15:55:26.840 | INFO     | test_sms:test_send_sms:11 - 调用sendSmsMsg类接口，发送参数：你好
+2019-08-20 15:55:26.843 | INFO     | test_sms:test_send_sms:14 - success，返回：None
+2019-08-20 15:55:26.845 | INFO     | public.mytest:tearDown:35 - ********MySms类用例结束***********
+2019-08-20 15:55:26.846 | INFO     | public.mytest:setUp:17 - ********MyTicket类用例开始***********
+2019-08-20 15:55:26.851 | INFO     | test_ticket:test_cannelorder:31 - 调用cannelOrder类接口，发送参数：123456
+2019-08-20 15:55:26.853 | ERROR    | test_ticket:test_cannelorder:36 - fail，错误：exception ::ticket::TestException
+{
+    code = 1002
+    msg = 哈哈，异常了
+}
+2019-08-20 15:55:26.854 | INFO     | public.mytest:tearDown:22 - ********MyTicket类用例结束***********
+2019-08-20 15:55:26.855 | INFO     | public.mytest:setUp:17 - ********MyTicket类用例开始***********
+2019-08-20 15:55:26.860 | INFO     | test_ticket:test_createorder:11 - 连接 ticketOrderIce:default -h 172.16.0.8 -p 11000 服务
+2019-08-20 15:55:26.860 | INFO     | test_ticket:test_createorder:18 - 调用createOrder类接口，发送参数：{"orderId": 333, "phone": "13028812388", "orderNum": "0182", "orderDate": 20190819, "ticketType": 1, "amount": 3.8, "orderStatus": 1}
+2019-08-20 15:55:26.864 | INFO     | test_ticket:test_createorder:21 - success，返回：True
+2019-08-20 15:55:26.866 | INFO     | public.mytest:tearDown:22 - ********MyTicket类用例结束***********
+2019-08-20 15:55:26.867 | INFO     | public.mytest:setUp:17 - ********MyTicket类用例开始***********
+2019-08-20 15:55:26.872 | INFO     | test_ticket:test_queryphone:43 - 调用queryByPhone类接口，发送参数：13028812388
+2019-08-20 15:55:26.874 | INFO     | test_ticket:test_queryphone:46 - success，返回：[
+{
+    orderId = 20190705001
+    phone = 18823775010
+    orderNum = 20190705001
+    orderDate = 1566287739758
+    ticketType = 1
+    amount = 6.66
+    orderStatus = 1
+}]
+2019-08-20 15:55:26.875 | INFO     | public.mytest:tearDown:22 - ********MyTicket类用例结束***********
+2019-08-20 17:50:08.596 | INFO     | public.mytest:setUp:30 - ********MySms类用例开始***********
+2019-08-20 17:50:08.605 | INFO     | testcase.test_sms:test_send_sms:11 - 调用sendSmsMsg类接口，发送参数：你好
+2019-08-20 17:50:08.607 | INFO     | testcase.test_sms:test_send_sms:14 - success，返回：None
+2019-08-20 17:50:08.609 | INFO     | public.mytest:tearDown:35 - ********MySms类用例结束***********
+2019-08-20 17:50:08.610 | INFO     | public.mytest:setUp:30 - ********MySms类用例开始***********
+2019-08-20 17:50:08.615 | INFO     | testcase.test_sms:test_send_sms:11 - 调用sendSmsMsg类接口，发送参数：你好
+2019-08-20 17:50:08.617 | INFO     | testcase.test_sms:test_send_sms:14 - success，返回：None
+2019-08-20 17:50:08.619 | INFO     | public.mytest:tearDown:35 - ********MySms类用例结束***********
+2019-08-20 17:51:31.765 | INFO     | public.mytest:setUp:30 - ********MySms类用例开始***********
+2019-08-20 17:51:31.774 | INFO     | test_sms:test_send_sms:11 - 调用sendSmsMsg类接口，发送参数：你好
+2019-08-20 17:51:31.777 | INFO     | test_sms:test_send_sms:14 - success，返回：None
+2019-08-20 17:51:31.778 | INFO     | public.mytest:tearDown:35 - ********MySms类用例结束***********
+2019-08-20 17:51:31.779 | INFO     | public.mytest:setUp:17 - ********MyTicket类用例开始***********
+2019-08-20 17:51:31.785 | INFO     | test_ticket:test_cannelorder:31 - 调用cannelOrder类接口，发送参数：123456
+2019-08-20 17:51:31.787 | ERROR    | test_ticket:test_cannelorder:36 - fail，错误：exception ::ticket::TestException
+{
+    code = 1002
+    msg = 哈哈，异常了
+}
+2019-08-20 17:51:31.788 | INFO     | public.mytest:tearDown:22 - ********MyTicket类用例结束***********
+2019-08-20 17:51:31.789 | INFO     | public.mytest:setUp:17 - ********MyTicket类用例开始***********
+2019-08-20 17:51:31.793 | INFO     | test_ticket:test_createorder:11 - 连接 ticketOrderIce:default -h 172.16.0.8 -p 11000 服务
+2019-08-20 17:51:31.794 | INFO     | test_ticket:test_createorder:18 - 调用createOrder类接口，发送参数：{"orderId": 333, "phone": "13028812388", "orderNum": "0182", "orderDate": 20190819, "ticketType": 1, "amount": 3.8, "orderStatus": 1}
+2019-08-20 17:51:31.797 | INFO     | test_ticket:test_createorder:21 - success，返回：True
+2019-08-20 17:51:31.799 | INFO     | public.mytest:tearDown:22 - ********MyTicket类用例结束***********
+2019-08-20 17:51:31.799 | INFO     | public.mytest:setUp:17 - ********MyTicket类用例开始***********
+2019-08-20 17:51:31.804 | INFO     | test_ticket:test_queryphone:43 - 调用queryByPhone类接口，发送参数：13028812388
+2019-08-20 17:51:31.806 | INFO     | test_ticket:test_queryphone:46 - success，返回：[
+{
+    orderId = 20190705001
+    phone = 18823775010
+    orderNum = 20190705001
+    orderDate = 1566294704735
+    ticketType = 1
+    amount = 6.66
+    orderStatus = 1
+}]
+2019-08-20 17:51:31.808 | INFO     | public.mytest:tearDown:22 - ********MyTicket类用例结束***********
+2019-08-20 17:51:46.612 | INFO     | public.mytest:setUp:30 - ********MySms类用例开始***********
+2019-08-20 17:51:46.620 | INFO     | testcase.test_sms:test_send_sms:11 - 调用sendSmsMsg类接口，发送参数：你好
+2019-08-20 17:51:46.623 | INFO     | testcase.test_sms:test_send_sms:14 - success，返回：None
+2019-08-20 17:51:46.625 | INFO     | public.mytest:tearDown:35 - ********MySms类用例结束***********
+2019-08-20 17:51:46.626 | INFO     | public.mytest:setUp:30 - ********MySms类用例开始***********
+2019-08-20 17:51:46.631 | INFO     | testcase.test_sms:test_send_sms:11 - 调用sendSmsMsg类接口，发送参数：你好
+2019-08-20 17:51:46.633 | INFO     | testcase.test_sms:test_send_sms:14 - success，返回：None
+2019-08-20 17:51:46.635 | INFO     | public.mytest:tearDown:35 - ********MySms类用例结束***********
+2019-08-20 17:52:19.920 | INFO     | public.mytest:setUp:30 - ********MySms类用例开始***********
+2019-08-20 17:52:19.927 | INFO     | testcase.test_sms:test_send_sms:11 - 调用sendSmsMsg类接口，发送参数：你好
+2019-08-20 17:52:19.929 | INFO     | testcase.test_sms:test_send_sms:14 - success，返回：None
+2019-08-20 17:52:19.931 | INFO     | public.mytest:tearDown:35 - ********MySms类用例结束***********
+2019-08-20 17:52:19.933 | INFO     | public.mytest:setUp:30 - ********MySms类用例开始***********
+2019-08-20 17:52:19.938 | INFO     | testcase.test_sms:test_send_sms:11 - 调用sendSmsMsg类接口，发送参数：你好
+2019-08-20 17:52:19.939 | INFO     | testcase.test_sms:test_send_sms:14 - success，返回：None
+2019-08-20 17:52:19.941 | INFO     | public.mytest:tearDown:35 - ********MySms类用例结束***********
+2019-08-20 17:52:36.457 | INFO     | public.mytest:setUp:30 - ********MySms类用例开始***********
+2019-08-20 17:52:36.465 | INFO     | testcase.test_sms:test_send_sms:11 - 调用sendSmsMsg类接口，发送参数：你好
+2019-08-20 17:52:36.468 | INFO     | testcase.test_sms:test_send_sms:14 - success，返回：None
+2019-08-20 17:52:36.470 | INFO     | public.mytest:tearDown:35 - ********MySms类用例结束***********
+2019-08-20 17:53:01.800 | INFO     | public.mytest:setUp:30 - ********MySms类用例开始***********
+2019-08-20 17:53:01.808 | INFO     | testcase.test_sms:test_send_sms:11 - 调用sendSmsMsg类接口，发送参数：你好
+2019-08-20 17:53:01.810 | INFO     | testcase.test_sms:test_send_sms:14 - success，返回：None
+2019-08-20 17:53:01.814 | INFO     | public.mytest:tearDown:35 - ********MySms类用例结束***********
+2019-08-20 17:53:44.030 | INFO     | public.mytest:setUp:30 - ********MySms类用例开始***********
+2019-08-20 17:53:44.037 | INFO     | testcase.test_sms:test_send_sms:11 - 调用sendSmsMsg类接口，发送参数：你好
+2019-08-20 17:53:44.039 | INFO     | testcase.test_sms:test_send_sms:14 - success，返回：None
+2019-08-20 17:53:44.041 | INFO     | public.mytest:tearDown:35 - ********MySms类用例结束***********
+2019-08-20 18:07:39.728 | INFO     | public.mytest:setUp:30 - ********MySms类用例开始***********
+2019-08-20 18:07:39.744 | INFO     | testcase.test_sms:test_send_sms:11 - 调用sendSmsMsg类接口，发送参数：你好
+2019-08-20 18:07:39.747 | INFO     | testcase.test_sms:test_send_sms:14 - success，返回：None
+2019-08-20 18:07:39.749 | INFO     | public.mytest:tearDown:35 - ********MySms类用例结束***********
+2019-08-20 18:08:54.726 | INFO     | public.mytest:setUp:30 - ********MySms类用例开始***********
+2019-08-20 18:08:54.734 | INFO     | test_sms:test_send_sms:11 - 调用sendSmsMsg类接口，发送参数：你好
+2019-08-20 18:08:54.736 | INFO     | test_sms:test_send_sms:14 - success，返回：None
+2019-08-20 18:08:54.738 | INFO     | public.mytest:tearDown:35 - ********MySms类用例结束***********
+2019-08-20 18:08:54.740 | INFO     | public.mytest:setUp:17 - ********MyTicket类用例开始***********
+2019-08-20 18:08:54.745 | INFO     | test_ticket:test_cannelorder:31 - 调用cannelOrder类接口，发送参数：123456
+2019-08-20 18:08:54.748 | ERROR    | test_ticket:test_cannelorder:36 - fail，错误：exception ::ticket::TestException
+{
+    code = 1002
+    msg = 哈哈，异常了
+}
+2019-08-20 18:08:54.749 | INFO     | public.mytest:tearDown:22 - ********MyTicket类用例结束***********
+2019-08-20 18:08:54.750 | INFO     | public.mytest:setUp:17 - ********MyTicket类用例开始***********
+2019-08-20 18:08:54.755 | INFO     | test_ticket:test_createorder:11 - 连接 ticketOrderIce:default -h 172.16.0.8 -p 11000 服务
+2019-08-20 18:08:54.756 | INFO     | test_ticket:test_createorder:18 - 调用createOrder类接口，发送参数：{"orderId": 333, "phone": "13028812388", "orderNum": "0182", "orderDate": 20190819, "ticketType": 1, "amount": 3.8, "orderStatus": 1}
+2019-08-20 18:08:54.758 | INFO     | test_ticket:test_createorder:21 - success，返回：True
+2019-08-20 18:08:54.760 | INFO     | public.mytest:tearDown:22 - ********MyTicket类用例结束***********
+2019-08-20 18:08:54.761 | INFO     | public.mytest:setUp:17 - ********MyTicket类用例开始***********
+2019-08-20 18:08:54.766 | INFO     | test_ticket:test_queryphone:43 - 调用queryByPhone类接口，发送参数：13028812388
+2019-08-20 18:08:54.768 | INFO     | test_ticket:test_queryphone:46 - success，返回：[
+{
+    orderId = 20190705001
+    phone = 18823775010
+    orderNum = 20190705001
+    orderDate = 1566295747703
+    ticketType = 1
+    amount = 6.66
+    orderStatus = 1
+}]
+2019-08-20 18:08:54.770 | INFO     | public.mytest:tearDown:22 - ********MyTicket类用例结束***********
