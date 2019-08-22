@@ -4,6 +4,7 @@ from config.basic_config import ConfigInit
 
 
 PATH = os.path.join(os.path.abspath(os.path.join(os.getcwd(), "..")), 'data\\test_data', ConfigInit.data_file_name)
+
 # print(PATH)
 def get_excel_dict(path, index=0):
     paralList=[]

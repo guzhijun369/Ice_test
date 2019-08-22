@@ -1,6 +1,6 @@
 from loguru import logger
 from public import mytest
-from ddt import ddt, data, unpack
+# from ddt import ddt, data, unpack
 import Ice
 
 
@@ -55,7 +55,7 @@ class Generated(mytest.MyPlatform):
         except Exception as e:
             logger.error('fail，错误：{}'.format(e))
 
-    def test_update_Platform_client_secret(self):
+    def test_update_platform_client_secret(self):
         printer = self.generated.PlatformServicePrx.checkedCast(self.base)
         if not printer:
             raise RuntimeError("Invalid proxy")

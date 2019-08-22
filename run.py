@@ -23,5 +23,5 @@ def run(method, test=None):
         runner.run(suit)
 
 if __name__ == '__main__':
-    run('one',test_generated.Generated("test_update_Platform_client_secret"))   # 指定执行哪一条，第二个参数为：用例文件名.类方法（用例名称）
+    run('one',test_generated.Generated("test_update_platform_client_secret"))   # 指定执行哪一条，第二个参数为：用例文件名.类方法（用例名称）
     # run('all') # 执行全部

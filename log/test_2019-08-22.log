@@ -1,0 +1,2 @@
+2019-08-22 17:49:55.114 | INFO     | public.mytest:setUp:47 - ********MyPlatform类用例开始***********
+2019-08-22 17:49:57.322 | INFO     | public.mytest:tearDown:51 - ********MyPlatform类用例结束***********
