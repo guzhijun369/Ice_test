@@ -1,9 +1,0 @@
-2019-08-21 09:56:53.744 | INFO     | public.mytest:setUp:30 - ********MySms类用例开始***********
-2019-08-21 09:56:53.762 | INFO     | testcase.test_sms:test_send_sms:11 - 调用sendSmsMsg类接口，发送参数：你好
-2019-08-21 09:56:53.778 | INFO     | testcase.test_sms:test_send_sms:14 - success，返回：None
-2019-08-21 09:56:53.780 | INFO     | public.mytest:tearDown:35 - ********MySms类用例结束***********
-2019-08-21 09:57:41.581 | INFO     | public.mytest:setUp:17 - ********MyTicket类用例开始***********
-2019-08-21 09:57:41.587 | INFO     | testcase.test_ticket:test_createorder:11 - 连接 ticketOrderIce:default -h 172.16.0.8 -p 11000 服务
-2019-08-21 09:57:41.588 | INFO     | testcase.test_ticket:test_createorder:18 - 调用createOrder类接口，发送参数：{"orderId": 333, "phone": "13028812388", "orderNum": "0182", "orderDate": 20190819, "ticketType": 1, "amount": 3.8, "orderStatus": 1}
-2019-08-21 09:57:41.597 | INFO     | testcase.test_ticket:test_createorder:21 - success，返回：True
-2019-08-21 09:57:41.598 | INFO     | public.mytest:tearDown:22 - ********MyTicket类用例结束***********
