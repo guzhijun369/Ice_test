@@ -7,6 +7,9 @@ Ice.updateModule("com.jimi.user")
 # Modules:
 import platform_ice
 import platform-header_ice
+import platform_header_ice
+import systemmember_ice
+import appuser_ice
 
 # Submodules:
 from . import api

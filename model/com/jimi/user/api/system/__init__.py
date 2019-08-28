@@ -7,6 +7,9 @@ Ice.updateModule("com.jimi.user.api.system")
 # Modules:
 import platform_ice
 import platform-header_ice
+import platform_header_ice
+import systemmember_ice
 
 # Submodules:
 from . import dto
+from . import constant

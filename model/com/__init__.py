@@ -7,6 +7,11 @@ Ice.updateModule("com")
 # Modules:
 import platform_ice
 import platform-header_ice
+import platform_header_ice
+import systemmember_ice
+import appuser_ice
+import organiz_ice
+import organiz_common_ice
 
 # Submodules:
 from . import jimi

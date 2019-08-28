@@ -2,7 +2,7 @@ import unittest
 import time
 from loguru import logger
 import os
-from testcase import test_generated
+from testcase import test_platform, test_organization, test_systemmember
 
 
 path = os.path.join(os.path.abspath('.'), 'log\\','test_{}.log'.format(time.strftime('%Y-%m-%d')))
@@ -23,5 +23,5 @@ def run(method, test=None):
         runner.run(suit)
 
 if __name__ == '__main__':
-    run('one',test_generated.Generated("test_update_platform_client_secret"))   # 指定执行哪一条，第二个参数为：用例文件名.类方法（用例名称）
+    run('one', test_platform.Platform("test_add_platform"))  # 指定执行哪一条，第二个参数为：用例文件名.类方法(用例名称)
     # run('all') # 执行全部

@@ -4,6 +4,37 @@ module user {
 module api {
 module system {
 module dto {
+
+/**
+ * 当前会话账号信息
+ *
+ * @date 2019年8月23日 上午10:05:28
+ * @author lcy
+ * @version 1.0
+ **/
+["java:getset"]
+struct CurrentAccount {
+    /**
+     * 账号id
+     **/
+    long uid;
+    /**
+     * 机构id
+     **/
+    long oid;
+    /**
+     * 平台code
+     **/
+    long code;
+};
+
+/**
+ * 应用极光推送 Key 和 Secret
+ *
+ * @date 2019年8月23日 上午10:05:28
+ * @author lcy
+ * @version 1.0
+ **/
 ["java:getset"]
 struct PushClient {
     /** Client ID **/
@@ -13,6 +44,13 @@ struct PushClient {
     string clientSecret;
 };
 
+/**
+ * 平台和应用 Key 和 Secret
+ *
+ * @date 2019年8月23日 上午10:05:28
+ * @author lcy
+ * @version 1.0
+ **/
 ["java:getset"]
 struct Client {
     /** Client ID **/
@@ -22,15 +60,13 @@ struct Client {
     string clientSecret;
 };
 
-["java:getset"]
-struct Member {
-    /** 用户ID **/
-    string userId;
-
-    /** 用户名称 **/
-    string name;
-};
-
+/**
+ * 创建平台APP输入参数
+ *
+ * @date 2019年8月23日 上午10:05:28
+ * @author lcy
+ * @version 1.0
+ **/
 ["java:getset"]
 struct PlatformAppInputDTO {
     /** 应用ID **/
@@ -61,6 +97,13 @@ struct PlatformAppInputDTO {
     PushClient push;
 }
 
+/**
+ * 创建平台输入数据
+ *
+ * @date 2019年8月23日 上午10:05:28
+ * @author lcy
+ * @version 1.0
+ **/
 ["java:getset"]
 struct PlatformInputDTO {
 
@@ -77,12 +120,19 @@ struct PlatformInputDTO {
     string desc;
 
     /** 平台创建用户ID **/
-    string createMemberId;
+    string createUserId;
 
     /** 平台更新用户ID **/
-    string updateMemberId;
+    string updateUserId;
 };
 
+/**
+ * 平台APP创建输出数据
+ *
+ * @date 2019年8月23日 上午10:05:28
+ * @author lcy
+ * @version 1.0
+ **/
 ["java:getset"]
 struct PlatformAppOutputDTO {
     /** 应用ID **/
@@ -116,6 +166,13 @@ struct PlatformAppOutputDTO {
     Client client;
 }
 
+/**
+ * 平台创建输出数据
+ *
+ * @date 2019年8月23日 上午10:05:28
+ * @author lcy
+ * @version 1.0
+ **/
 ["java:getset"]
 struct PlatformOutputDTO {
 
@@ -132,10 +189,10 @@ struct PlatformOutputDTO {
     string desc;
 
     /** 平台创建用户 **/
-    Member create;
+    string createUserId;
 
     /** 平台更新用户 **/
-    Member update;
+    string updateUserId;
 
     /** 平台登录接口权限校验 **/
     Client client;

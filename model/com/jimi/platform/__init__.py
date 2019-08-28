@@ -7,6 +7,8 @@ Ice.updateModule("com.jimi.platform")
 # Modules:
 import platform_ice
 import platform-header_ice
+import organiz_ice
+import organiz_common_ice
 
 # Submodules:
 from . import user
