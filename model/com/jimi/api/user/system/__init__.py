@@ -2,10 +2,11 @@
 #
 
 import Ice
-Ice.updateModule("com.jimi.user.api.app")
+Ice.updateModule("com.jimi.api.user.system")
 
 # Modules:
-import appuser_ice
+import platform_ice
+import platform_dto_ice
 
 # Submodules:
 from . import dto

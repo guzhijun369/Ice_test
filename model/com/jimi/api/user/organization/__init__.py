@@ -2,14 +2,11 @@
 #
 
 import Ice
-Ice.updateModule("com.jimi")
+Ice.updateModule("com.jimi.api.user.organization")
 
 # Modules:
-import platform_ice
-import platform_dto_ice
-import common_ice
 import organization_type_ice
 import organization_type_dto_ice
 
 # Submodules:
-from . import api
+from . import dto

@@ -16,7 +16,7 @@
 
 from sys import version_info as _version_info_
 import Ice, IcePy
-from model import platform_header_ice
+from model import platform_dto_ice
 
 # Included module com
 _M_com = Ice.openModule('com')
@@ -24,17 +24,17 @@ _M_com = Ice.openModule('com')
 # Included module com.jimi
 _M_com.jimi = Ice.openModule('com.jimi')
 
-# Included module com.jimi.user
-_M_com.jimi.user = Ice.openModule('com.jimi.user')
+# Included module com.jimi.api
+_M_com.jimi.api = Ice.openModule('com.jimi.api')
 
-# Included module com.jimi.user.api
-_M_com.jimi.user.api = Ice.openModule('com.jimi.user.api')
+# Included module com.jimi.api.user
+_M_com.jimi.api.user = Ice.openModule('com.jimi.api.user')
 
-# Included module com.jimi.user.api.system
-_M_com.jimi.user.api.system = Ice.openModule('com.jimi.user.api.system')
+# Included module com.jimi.api.user.system
+_M_com.jimi.api.user.system = Ice.openModule('com.jimi.api.user.system')
 
-# Included module com.jimi.user.api.system.dto
-_M_com.jimi.user.api.system.dto = Ice.openModule('com.jimi.user.api.system.dto')
+# Included module com.jimi.api.user.system.dto
+_M_com.jimi.api.user.system.dto = Ice.openModule('com.jimi.api.user.system.dto')
 
 # Start of module com
 __name__ = 'com'
@@ -42,53 +42,50 @@ __name__ = 'com'
 # Start of module com.jimi
 __name__ = 'com.jimi'
 
-# Start of module com.jimi.user
-__name__ = 'com.jimi.user'
+# Start of module com.jimi.api
+__name__ = 'com.jimi.api'
 
-# Start of module com.jimi.user.api
-__name__ = 'com.jimi.user.api'
+# Start of module com.jimi.api.user
+__name__ = 'com.jimi.api.user'
 
-# Start of module com.jimi.user.api.system
-__name__ = 'com.jimi.user.api.system'
+# Start of module com.jimi.api.user.system
+__name__ = 'com.jimi.api.user.system'
 
-if '_t_PlatformList' not in _M_com.jimi.user.api.system.__dict__:
-    _M_com.jimi.user.api.system._t_PlatformList = IcePy.defineSequence('::com::jimi::user::api::system::PlatformList', (), _M_com.jimi.user.api.system.dto._t_PlatformOutputDTO)
+if '_t_PlatformList' not in _M_com.jimi.api.user.system.__dict__:
+    _M_com.jimi.api.user.system._t_PlatformList = IcePy.defineSequence('::com::jimi::api::user::system::PlatformList', (), _M_com.jimi.api.user.system.dto._t_PlatformOutputDTO)
 
-if '_t_PlatformAppList' not in _M_com.jimi.user.api.system.__dict__:
-    _M_com.jimi.user.api.system._t_PlatformAppList = IcePy.defineSequence('::com::jimi::user::api::system::PlatformAppList', (), _M_com.jimi.user.api.system.dto._t_PlatformAppOutputDTO)
+if '_t_PlatformAppList' not in _M_com.jimi.api.user.system.__dict__:
+    _M_com.jimi.api.user.system._t_PlatformAppList = IcePy.defineSequence('::com::jimi::api::user::system::PlatformAppList', (), _M_com.jimi.api.user.system.dto._t_PlatformAppOutputDTO)
 
-_M_com.jimi.user.api.system._t_PlatformService = IcePy.defineValue('::com::jimi::user::api::system::PlatformService', Ice.Value, -1, (), False, True, None, ())
+_M_com.jimi.api.user.system._t_PlatformApi = IcePy.defineValue('::com::jimi::api::user::system::PlatformApi', Ice.Value, -1, (), False, True, None, ())
 
-if 'PlatformServicePrx' not in _M_com.jimi.user.api.system.__dict__:
-    _M_com.jimi.user.api.system.PlatformServicePrx = Ice.createTempClass()
-    class PlatformServicePrx(Ice.ObjectPrx):
+if 'PlatformApiPrx' not in _M_com.jimi.api.user.system.__dict__:
+    _M_com.jimi.api.user.system.PlatformApiPrx = Ice.createTempClass()
+    class PlatformApiPrx(Ice.ObjectPrx):
 
         """
         添加平台信息
         Arguments:
-        accout -- 当前会话操作人
         platformInputDTO -- 平台相关信息
         context -- The request context for the invocation.
         Returns: 平新增加平台信息
         """
-        def addPlatform(self, accout, platformInputDTO, context=None):
-            return _M_com.jimi.user.api.system.PlatformService._op_addPlatform.invoke(self, ((accout, platformInputDTO), context))
+        def addPlatform(self, platformInputDTO, context=None):
+            return _M_com.jimi.api.user.system.PlatformApi._op_addPlatform.invoke(self, ((platformInputDTO, ), context))
 
         """
         添加平台信息
         Arguments:
-        accout -- 当前会话操作人
         platformInputDTO -- 平台相关信息
         context -- The request context for the invocation.
         Returns: A future object for the invocation.
         """
-        def addPlatformAsync(self, accout, platformInputDTO, context=None):
-            return _M_com.jimi.user.api.system.PlatformService._op_addPlatform.invokeAsync(self, ((accout, platformInputDTO), context))
+        def addPlatformAsync(self, platformInputDTO, context=None):
+            return _M_com.jimi.api.user.system.PlatformApi._op_addPlatform.invokeAsync(self, ((platformInputDTO, ), context))
 
         """
         添加平台信息
         Arguments:
-        accout -- 当前会话操作人
         platformInputDTO -- 平台相关信息
         _response -- The asynchronous response callback.
         _ex -- The asynchronous exception callback.
@@ -96,44 +93,41 @@ if 'PlatformServicePrx' not in _M_com.jimi.user.api.system.__dict__:
         context -- The request context for the invocation.
         Returns: An asynchronous result object for the invocation.
         """
-        def begin_addPlatform(self, accout, platformInputDTO, _response=None, _ex=None, _sent=None, context=None):
-            return _M_com.jimi.user.api.system.PlatformService._op_addPlatform.begin(self, ((accout, platformInputDTO), _response, _ex, _sent, context))
+        def begin_addPlatform(self, platformInputDTO, _response=None, _ex=None, _sent=None, context=None):
+            return _M_com.jimi.api.user.system.PlatformApi._op_addPlatform.begin(self, ((platformInputDTO, ), _response, _ex, _sent, context))
 
         """
         添加平台信息
         Arguments:
-        accout -- 当前会话操作人
         platformInputDTO -- 平台相关信息
         Returns: 平新增加平台信息
         """
         def end_addPlatform(self, _r):
-            return _M_com.jimi.user.api.system.PlatformService._op_addPlatform.end(self, _r)
+            return _M_com.jimi.api.user.system.PlatformApi._op_addPlatform.end(self, _r)
 
         """
         更新平台信息
         Arguments:
-        accout -- 当前会话操作人
         platformInputDTO -- 平台相关信息
         context -- The request context for the invocation.
+        Returns: 更新后平台的相关信息
         """
-        def updatePlatform(self, accout, platformInputDTO, context=None):
-            return _M_com.jimi.user.api.system.PlatformService._op_updatePlatform.invoke(self, ((accout, platformInputDTO), context))
+        def updatePlatform(self, platformInputDTO, context=None):
+            return _M_com.jimi.api.user.system.PlatformApi._op_updatePlatform.invoke(self, ((platformInputDTO, ), context))
 
         """
         更新平台信息
         Arguments:
-        accout -- 当前会话操作人
         platformInputDTO -- 平台相关信息
         context -- The request context for the invocation.
         Returns: A future object for the invocation.
         """
-        def updatePlatformAsync(self, accout, platformInputDTO, context=None):
-            return _M_com.jimi.user.api.system.PlatformService._op_updatePlatform.invokeAsync(self, ((accout, platformInputDTO), context))
+        def updatePlatformAsync(self, platformInputDTO, context=None):
+            return _M_com.jimi.api.user.system.PlatformApi._op_updatePlatform.invokeAsync(self, ((platformInputDTO, ), context))
 
         """
         更新平台信息
         Arguments:
-        accout -- 当前会话操作人
         platformInputDTO -- 平台相关信息
         _response -- The asynchronous response callback.
         _ex -- The asynchronous exception callback.
@@ -141,43 +135,43 @@ if 'PlatformServicePrx' not in _M_com.jimi.user.api.system.__dict__:
         context -- The request context for the invocation.
         Returns: An asynchronous result object for the invocation.
         """
-        def begin_updatePlatform(self, accout, platformInputDTO, _response=None, _ex=None, _sent=None, context=None):
-            return _M_com.jimi.user.api.system.PlatformService._op_updatePlatform.begin(self, ((accout, platformInputDTO), _response, _ex, _sent, context))
+        def begin_updatePlatform(self, platformInputDTO, _response=None, _ex=None, _sent=None, context=None):
+            return _M_com.jimi.api.user.system.PlatformApi._op_updatePlatform.begin(self, ((platformInputDTO, ), _response, _ex, _sent, context))
 
         """
         更新平台信息
         Arguments:
-        accout -- 当前会话操作人
         platformInputDTO -- 平台相关信息
+        Returns: 更新后平台的相关信息
         """
         def end_updatePlatform(self, _r):
-            return _M_com.jimi.user.api.system.PlatformService._op_updatePlatform.end(self, _r)
+            return _M_com.jimi.api.user.system.PlatformApi._op_updatePlatform.end(self, _r)
 
         """
         删除平台信息
         Arguments:
-        accout -- 当前会话操作人
+        account -- 
         platformCode -- 平台编码
         context -- The request context for the invocation.
         """
-        def deletePlatformBy(self, accout, platformCode, context=None):
-            return _M_com.jimi.user.api.system.PlatformService._op_deletePlatformBy.invoke(self, ((accout, platformCode), context))
+        def deletePlatformBy(self, account, platformCode, context=None):
+            return _M_com.jimi.api.user.system.PlatformApi._op_deletePlatformBy.invoke(self, ((account, platformCode), context))
 
         """
         删除平台信息
         Arguments:
-        accout -- 当前会话操作人
+        account -- 
         platformCode -- 平台编码
         context -- The request context for the invocation.
         Returns: A future object for the invocation.
         """
-        def deletePlatformByAsync(self, accout, platformCode, context=None):
-            return _M_com.jimi.user.api.system.PlatformService._op_deletePlatformBy.invokeAsync(self, ((accout, platformCode), context))
+        def deletePlatformByAsync(self, account, platformCode, context=None):
+            return _M_com.jimi.api.user.system.PlatformApi._op_deletePlatformBy.invokeAsync(self, ((account, platformCode), context))
 
         """
         删除平台信息
         Arguments:
-        accout -- 当前会话操作人
+        account -- 
         platformCode -- 平台编码
         _response -- The asynchronous response callback.
         _ex -- The asynchronous exception callback.
@@ -185,86 +179,132 @@ if 'PlatformServicePrx' not in _M_com.jimi.user.api.system.__dict__:
         context -- The request context for the invocation.
         Returns: An asynchronous result object for the invocation.
         """
-        def begin_deletePlatformBy(self, accout, platformCode, _response=None, _ex=None, _sent=None, context=None):
-            return _M_com.jimi.user.api.system.PlatformService._op_deletePlatformBy.begin(self, ((accout, platformCode), _response, _ex, _sent, context))
+        def begin_deletePlatformBy(self, account, platformCode, _response=None, _ex=None, _sent=None, context=None):
+            return _M_com.jimi.api.user.system.PlatformApi._op_deletePlatformBy.begin(self, ((account, platformCode), _response, _ex, _sent, context))
 
         """
         删除平台信息
         Arguments:
-        accout -- 当前会话操作人
+        account -- 
         platformCode -- 平台编码
         """
         def end_deletePlatformBy(self, _r):
-            return _M_com.jimi.user.api.system.PlatformService._op_deletePlatformBy.end(self, _r)
+            return _M_com.jimi.api.user.system.PlatformApi._op_deletePlatformBy.end(self, _r)
 
         """
         获取所有平台信息
         Arguments:
-        accout -- 当前会话操作人
+        pageNum -- 页码
+        pageSize -- 页数
         context -- The request context for the invocation.
         Returns: 平台信息列表
         """
-        def getAllPlatform(self, accout, context=None):
-            return _M_com.jimi.user.api.system.PlatformService._op_getAllPlatform.invoke(self, ((accout, ), context))
+        def getAllPlatform(self, pageNum, pageSize, context=None):
+            return _M_com.jimi.api.user.system.PlatformApi._op_getAllPlatform.invoke(self, ((pageNum, pageSize), context))
 
         """
         获取所有平台信息
         Arguments:
-        accout -- 当前会话操作人
+        pageNum -- 页码
+        pageSize -- 页数
         context -- The request context for the invocation.
         Returns: A future object for the invocation.
         """
-        def getAllPlatformAsync(self, accout, context=None):
-            return _M_com.jimi.user.api.system.PlatformService._op_getAllPlatform.invokeAsync(self, ((accout, ), context))
+        def getAllPlatformAsync(self, pageNum, pageSize, context=None):
+            return _M_com.jimi.api.user.system.PlatformApi._op_getAllPlatform.invokeAsync(self, ((pageNum, pageSize), context))
 
         """
         获取所有平台信息
         Arguments:
-        accout -- 当前会话操作人
+        pageNum -- 页码
+        pageSize -- 页数
         _response -- The asynchronous response callback.
         _ex -- The asynchronous exception callback.
         _sent -- The asynchronous sent callback.
         context -- The request context for the invocation.
         Returns: An asynchronous result object for the invocation.
         """
-        def begin_getAllPlatform(self, accout, _response=None, _ex=None, _sent=None, context=None):
-            return _M_com.jimi.user.api.system.PlatformService._op_getAllPlatform.begin(self, ((accout, ), _response, _ex, _sent, context))
+        def begin_getAllPlatform(self, pageNum, pageSize, _response=None, _ex=None, _sent=None, context=None):
+            return _M_com.jimi.api.user.system.PlatformApi._op_getAllPlatform.begin(self, ((pageNum, pageSize), _response, _ex, _sent, context))
 
         """
         获取所有平台信息
         Arguments:
-        accout -- 当前会话操作人
+        pageNum -- 页码
+        pageSize -- 页数
         Returns: 平台信息列表
         """
         def end_getAllPlatform(self, _r):
-            return _M_com.jimi.user.api.system.PlatformService._op_getAllPlatform.end(self, _r)
+            return _M_com.jimi.api.user.system.PlatformApi._op_getAllPlatform.end(self, _r)
+
+        """
+        通过平台code获取平台信息
+        Arguments:
+        platformCode -- 
+        context -- The request context for the invocation.
+        Returns: 平台信息列表
+        """
+        def findPlatformByCode(self, platformCode, context=None):
+            return _M_com.jimi.api.user.system.PlatformApi._op_findPlatformByCode.invoke(self, ((platformCode, ), context))
+
+        """
+        通过平台code获取平台信息
+        Arguments:
+        platformCode -- 
+        context -- The request context for the invocation.
+        Returns: A future object for the invocation.
+        """
+        def findPlatformByCodeAsync(self, platformCode, context=None):
+            return _M_com.jimi.api.user.system.PlatformApi._op_findPlatformByCode.invokeAsync(self, ((platformCode, ), context))
+
+        """
+        通过平台code获取平台信息
+        Arguments:
+        platformCode -- 
+        _response -- The asynchronous response callback.
+        _ex -- The asynchronous exception callback.
+        _sent -- The asynchronous sent callback.
+        context -- The request context for the invocation.
+        Returns: An asynchronous result object for the invocation.
+        """
+        def begin_findPlatformByCode(self, platformCode, _response=None, _ex=None, _sent=None, context=None):
+            return _M_com.jimi.api.user.system.PlatformApi._op_findPlatformByCode.begin(self, ((platformCode, ), _response, _ex, _sent, context))
+
+        """
+        通过平台code获取平台信息
+        Arguments:
+        platformCode -- 
+        Returns: 平台信息列表
+        """
+        def end_findPlatformByCode(self, _r):
+            return _M_com.jimi.api.user.system.PlatformApi._op_findPlatformByCode.end(self, _r)
 
         """
         重置平台Client相关内容
         Arguments:
-        accout -- 当前会话操作人
+        account -- 
         platformCode -- 平台编码
         context -- The request context for the invocation.
         Returns: 重置后的平台 Client Secret
         """
-        def resetPlatformClientSecret(self, accout, platformCode, context=None):
-            return _M_com.jimi.user.api.system.PlatformService._op_resetPlatformClientSecret.invoke(self, ((accout, platformCode), context))
+        def resetPlatformClientSecret(self, account, platformCode, context=None):
+            return _M_com.jimi.api.user.system.PlatformApi._op_resetPlatformClientSecret.invoke(self, ((account, platformCode), context))
 
         """
         重置平台Client相关内容
         Arguments:
-        accout -- 当前会话操作人
+        account -- 
         platformCode -- 平台编码
         context -- The request context for the invocation.
         Returns: A future object for the invocation.
         """
-        def resetPlatformClientSecretAsync(self, accout, platformCode, context=None):
-            return _M_com.jimi.user.api.system.PlatformService._op_resetPlatformClientSecret.invokeAsync(self, ((accout, platformCode), context))
+        def resetPlatformClientSecretAsync(self, account, platformCode, context=None):
+            return _M_com.jimi.api.user.system.PlatformApi._op_resetPlatformClientSecret.invokeAsync(self, ((account, platformCode), context))
 
         """
         重置平台Client相关内容
         Arguments:
-        accout -- 当前会话操作人
+        account -- 
         platformCode -- 平台编码
         _response -- The asynchronous response callback.
         _ex -- The asynchronous exception callback.
@@ -272,45 +312,45 @@ if 'PlatformServicePrx' not in _M_com.jimi.user.api.system.__dict__:
         context -- The request context for the invocation.
         Returns: An asynchronous result object for the invocation.
         """
-        def begin_resetPlatformClientSecret(self, accout, platformCode, _response=None, _ex=None, _sent=None, context=None):
-            return _M_com.jimi.user.api.system.PlatformService._op_resetPlatformClientSecret.begin(self, ((accout, platformCode), _response, _ex, _sent, context))
+        def begin_resetPlatformClientSecret(self, account, platformCode, _response=None, _ex=None, _sent=None, context=None):
+            return _M_com.jimi.api.user.system.PlatformApi._op_resetPlatformClientSecret.begin(self, ((account, platformCode), _response, _ex, _sent, context))
 
         """
         重置平台Client相关内容
         Arguments:
-        accout -- 当前会话操作人
+        account -- 
         platformCode -- 平台编码
         Returns: 重置后的平台 Client Secret
         """
         def end_resetPlatformClientSecret(self, _r):
-            return _M_com.jimi.user.api.system.PlatformService._op_resetPlatformClientSecret.end(self, _r)
+            return _M_com.jimi.api.user.system.PlatformApi._op_resetPlatformClientSecret.end(self, _r)
 
         """
         查看平台 Client Secret
         Arguments:
-        accout -- 当前会话操作人
+        account -- 
         platformCode -- 平台编码
         context -- The request context for the invocation.
         Returns: 平台 Client Secret
         """
-        def lookupPlatformClientSecret(self, accout, platformCode, context=None):
-            return _M_com.jimi.user.api.system.PlatformService._op_lookupPlatformClientSecret.invoke(self, ((accout, platformCode), context))
+        def lookupPlatformClientSecret(self, account, platformCode, context=None):
+            return _M_com.jimi.api.user.system.PlatformApi._op_lookupPlatformClientSecret.invoke(self, ((account, platformCode), context))
 
         """
         查看平台 Client Secret
         Arguments:
-        accout -- 当前会话操作人
+        account -- 
         platformCode -- 平台编码
         context -- The request context for the invocation.
         Returns: A future object for the invocation.
         """
-        def lookupPlatformClientSecretAsync(self, accout, platformCode, context=None):
-            return _M_com.jimi.user.api.system.PlatformService._op_lookupPlatformClientSecret.invokeAsync(self, ((accout, platformCode), context))
+        def lookupPlatformClientSecretAsync(self, account, platformCode, context=None):
+            return _M_com.jimi.api.user.system.PlatformApi._op_lookupPlatformClientSecret.invokeAsync(self, ((account, platformCode), context))
 
         """
         查看平台 Client Secret
         Arguments:
-        accout -- 当前会话操作人
+        account -- 
         platformCode -- 平台编码
         _response -- The asynchronous response callback.
         _ex -- The asynchronous exception callback.
@@ -318,107 +358,116 @@ if 'PlatformServicePrx' not in _M_com.jimi.user.api.system.__dict__:
         context -- The request context for the invocation.
         Returns: An asynchronous result object for the invocation.
         """
-        def begin_lookupPlatformClientSecret(self, accout, platformCode, _response=None, _ex=None, _sent=None, context=None):
-            return _M_com.jimi.user.api.system.PlatformService._op_lookupPlatformClientSecret.begin(self, ((accout, platformCode), _response, _ex, _sent, context))
+        def begin_lookupPlatformClientSecret(self, account, platformCode, _response=None, _ex=None, _sent=None, context=None):
+            return _M_com.jimi.api.user.system.PlatformApi._op_lookupPlatformClientSecret.begin(self, ((account, platformCode), _response, _ex, _sent, context))
 
         """
         查看平台 Client Secret
         Arguments:
-        accout -- 当前会话操作人
+        account -- 
         platformCode -- 平台编码
         Returns: 平台 Client Secret
         """
         def end_lookupPlatformClientSecret(self, _r):
-            return _M_com.jimi.user.api.system.PlatformService._op_lookupPlatformClientSecret.end(self, _r)
+            return _M_com.jimi.api.user.system.PlatformApi._op_lookupPlatformClientSecret.end(self, _r)
 
         @staticmethod
         def checkedCast(proxy, facetOrContext=None, context=None):
-            return _M_com.jimi.user.api.system.PlatformServicePrx.ice_checkedCast(proxy, '::com::jimi::user::api::system::PlatformService', facetOrContext, context)
+            return _M_com.jimi.api.user.system.PlatformApiPrx.ice_checkedCast(proxy, '::com::jimi::api::user::system::PlatformApi', facetOrContext, context)
 
         @staticmethod
         def uncheckedCast(proxy, facet=None):
-            return _M_com.jimi.user.api.system.PlatformServicePrx.ice_uncheckedCast(proxy, facet)
+            return _M_com.jimi.api.user.system.PlatformApiPrx.ice_uncheckedCast(proxy, facet)
 
         @staticmethod
         def ice_staticId():
-            return '::com::jimi::user::api::system::PlatformService'
-    _M_com.jimi.user.api.system._t_PlatformServicePrx = IcePy.defineProxy('::com::jimi::user::api::system::PlatformService', PlatformServicePrx)
+            return '::com::jimi::api::user::system::PlatformApi'
+    _M_com.jimi.api.user.system._t_PlatformApiPrx = IcePy.defineProxy('::com::jimi::api::user::system::PlatformApi', PlatformApiPrx)
 
-    _M_com.jimi.user.api.system.PlatformServicePrx = PlatformServicePrx
-    del PlatformServicePrx
+    _M_com.jimi.api.user.system.PlatformApiPrx = PlatformApiPrx
+    del PlatformApiPrx
 
-    _M_com.jimi.user.api.system.PlatformService = Ice.createTempClass()
-    class PlatformService(Ice.Object):
+    _M_com.jimi.api.user.system.PlatformApi = Ice.createTempClass()
+    class PlatformApi(Ice.Object):
 
         def ice_ids(self, current=None):
-            return ('::Ice::Object', '::com::jimi::user::api::system::PlatformService')
+            return ('::Ice::Object', '::com::jimi::api::user::system::PlatformApi')
 
         def ice_id(self, current=None):
-            return '::com::jimi::user::api::system::PlatformService'
+            return '::com::jimi::api::user::system::PlatformApi'
 
         @staticmethod
         def ice_staticId():
-            return '::com::jimi::user::api::system::PlatformService'
+            return '::com::jimi::api::user::system::PlatformApi'
 
-        def addPlatform(self, accout, platformInputDTO, current=None):
+        def addPlatform(self, platformInputDTO, current=None):
             """
             添加平台信息
             Arguments:
-            accout -- 当前会话操作人
             platformInputDTO -- 平台相关信息
             current -- The Current object for the invocation.
             Returns: A future object for the invocation.
             """
             raise NotImplementedError("servant method 'addPlatform' not implemented")
 
-        def updatePlatform(self, accout, platformInputDTO, current=None):
+        def updatePlatform(self, platformInputDTO, current=None):
             """
             更新平台信息
             Arguments:
-            accout -- 当前会话操作人
             platformInputDTO -- 平台相关信息
             current -- The Current object for the invocation.
             Returns: A future object for the invocation.
             """
             raise NotImplementedError("servant method 'updatePlatform' not implemented")
 
-        def deletePlatformBy(self, accout, platformCode, current=None):
+        def deletePlatformBy(self, account, platformCode, current=None):
             """
             删除平台信息
             Arguments:
-            accout -- 当前会话操作人
+            account -- 
             platformCode -- 平台编码
             current -- The Current object for the invocation.
             Returns: A future object for the invocation.
             """
             raise NotImplementedError("servant method 'deletePlatformBy' not implemented")
 
-        def getAllPlatform(self, accout, current=None):
+        def getAllPlatform(self, pageNum, pageSize, current=None):
             """
             获取所有平台信息
             Arguments:
-            accout -- 当前会话操作人
+            pageNum -- 页码
+            pageSize -- 页数
             current -- The Current object for the invocation.
             Returns: A future object for the invocation.
             """
             raise NotImplementedError("servant method 'getAllPlatform' not implemented")
 
-        def resetPlatformClientSecret(self, accout, platformCode, current=None):
+        def findPlatformByCode(self, platformCode, current=None):
+            """
+            通过平台code获取平台信息
+            Arguments:
+            platformCode -- 
+            current -- The Current object for the invocation.
+            Returns: A future object for the invocation.
+            """
+            raise NotImplementedError("servant method 'findPlatformByCode' not implemented")
+
+        def resetPlatformClientSecret(self, account, platformCode, current=None):
             """
             重置平台Client相关内容
             Arguments:
-            accout -- 当前会话操作人
+            account -- 
             platformCode -- 平台编码
             current -- The Current object for the invocation.
             Returns: A future object for the invocation.
             """
             raise NotImplementedError("servant method 'resetPlatformClientSecret' not implemented")
 
-        def lookupPlatformClientSecret(self, accout, platformCode, current=None):
+        def lookupPlatformClientSecret(self, account, platformCode, current=None):
             """
             查看平台 Client Secret
             Arguments:
-            accout -- 当前会话操作人
+            account -- 
             platformCode -- 平台编码
             current -- The Current object for the invocation.
             Returns: A future object for the invocation.
@@ -426,55 +475,53 @@ if 'PlatformServicePrx' not in _M_com.jimi.user.api.system.__dict__:
             raise NotImplementedError("servant method 'lookupPlatformClientSecret' not implemented")
 
         def __str__(self):
-            return IcePy.stringify(self, _M_com.jimi.user.api.system._t_PlatformServiceDisp)
+            return IcePy.stringify(self, _M_com.jimi.api.user.system._t_PlatformApiDisp)
 
         __repr__ = __str__
 
-    _M_com.jimi.user.api.system._t_PlatformServiceDisp = IcePy.defineClass('::com::jimi::user::api::system::PlatformService', PlatformService, (), None, ())
-    PlatformService._ice_type = _M_com.jimi.user.api.system._t_PlatformServiceDisp
+    _M_com.jimi.api.user.system._t_PlatformApiDisp = IcePy.defineClass('::com::jimi::api::user::system::PlatformApi', PlatformApi, (), None, ())
+    PlatformApi._ice_type = _M_com.jimi.api.user.system._t_PlatformApiDisp
 
-    PlatformService._op_addPlatform = IcePy.Operation('addPlatform', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.user.api.system.dto._t_CurrentAccount, False, 0), ((), _M_com.jimi.user.api.system.dto._t_PlatformInputDTO, False, 0)), (), ((), _M_com.jimi.user.api.system.dto._t_PlatformOutputDTO, False, 0), ())
-    PlatformService._op_updatePlatform = IcePy.Operation('updatePlatform', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.user.api.system.dto._t_CurrentAccount, False, 0), ((), _M_com.jimi.user.api.system.dto._t_PlatformInputDTO, False, 0)), (), None, ())
-    PlatformService._op_deletePlatformBy = IcePy.Operation('deletePlatformBy', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.user.api.system.dto._t_CurrentAccount, False, 0), ((), IcePy._t_string, False, 0)), (), None, ())
-    PlatformService._op_getAllPlatform = IcePy.Operation('getAllPlatform', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.user.api.system.dto._t_CurrentAccount, False, 0),), (), ((), _M_com.jimi.user.api.system._t_PlatformList, False, 0), ())
-    PlatformService._op_resetPlatformClientSecret = IcePy.Operation('resetPlatformClientSecret', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.user.api.system.dto._t_CurrentAccount, False, 0), ((), IcePy._t_string, False, 0)), (), ((), IcePy._t_string, False, 0), ())
-    PlatformService._op_lookupPlatformClientSecret = IcePy.Operation('lookupPlatformClientSecret', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.user.api.system.dto._t_CurrentAccount, False, 0), ((), IcePy._t_string, False, 0)), (), ((), IcePy._t_string, False, 0), ())
+    PlatformApi._op_addPlatform = IcePy.Operation('addPlatform', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.api.user.system.dto._t_PlatformInputDTO, False, 0),), (), ((), _M_com.jimi.api.user.system.dto._t_PlatformOutputDTO, False, 0), (_M_com.jimi.api._t_ApiException,))
+    PlatformApi._op_updatePlatform = IcePy.Operation('updatePlatform', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.api.user.system.dto._t_PlatformInputDTO, False, 0),), (), ((), IcePy._t_bool, False, 0), (_M_com.jimi.api._t_ApiException,))
+    PlatformApi._op_deletePlatformBy = IcePy.Operation('deletePlatformBy', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.api._t_CurrentAccount, False, 0), ((), IcePy._t_string, False, 0)), (), None, (_M_com.jimi.api._t_ApiException,))
+    PlatformApi._op_getAllPlatform = IcePy.Operation('getAllPlatform', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), IcePy._t_int, False, 0), ((), IcePy._t_int, False, 0)), (), ((), _M_com.jimi.api.user.system._t_PlatformList, False, 0), ())
+    PlatformApi._op_findPlatformByCode = IcePy.Operation('findPlatformByCode', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), IcePy._t_string, False, 0),), (), ((), _M_com.jimi.api.user.system.dto._t_PlatformOutputDTO, False, 0), ())
+    PlatformApi._op_resetPlatformClientSecret = IcePy.Operation('resetPlatformClientSecret', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.api._t_CurrentAccount, False, 0), ((), IcePy._t_string, False, 0)), (), ((), IcePy._t_string, False, 0), (_M_com.jimi.api._t_ApiException,))
+    PlatformApi._op_lookupPlatformClientSecret = IcePy.Operation('lookupPlatformClientSecret', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.api._t_CurrentAccount, False, 0), ((), IcePy._t_string, False, 0)), (), ((), IcePy._t_string, False, 0), (_M_com.jimi.api._t_ApiException,))
 
-    _M_com.jimi.user.api.system.PlatformService = PlatformService
-    del PlatformService
+    _M_com.jimi.api.user.system.PlatformApi = PlatformApi
+    del PlatformApi
 
-_M_com.jimi.user.api.system._t_ApplicationService = IcePy.defineValue('::com::jimi::user::api::system::ApplicationService', Ice.Value, -1, (), False, True, None, ())
+_M_com.jimi.api.user.system._t_ApplicationApi = IcePy.defineValue('::com::jimi::api::user::system::ApplicationApi', Ice.Value, -1, (), False, True, None, ())
 
-if 'ApplicationServicePrx' not in _M_com.jimi.user.api.system.__dict__:
-    _M_com.jimi.user.api.system.ApplicationServicePrx = Ice.createTempClass()
-    class ApplicationServicePrx(Ice.ObjectPrx):
+if 'ApplicationApiPrx' not in _M_com.jimi.api.user.system.__dict__:
+    _M_com.jimi.api.user.system.ApplicationApiPrx = Ice.createTempClass()
+    class ApplicationApiPrx(Ice.ObjectPrx):
 
         """
         添加平台APP信息
         Arguments:
-        accout -- 当前会话操作人
         platformAppInputDTO -- 平台APP相关信息
         context -- The request context for the invocation.
         Returns: 平新增加平台App信息
         """
-        def addApplication(self, accout, platformAppInputDTO, context=None):
-            return _M_com.jimi.user.api.system.ApplicationService._op_addApplication.invoke(self, ((accout, platformAppInputDTO), context))
+        def addApplication(self, platformAppInputDTO, context=None):
+            return _M_com.jimi.api.user.system.ApplicationApi._op_addApplication.invoke(self, ((platformAppInputDTO, ), context))
 
         """
         添加平台APP信息
         Arguments:
-        accout -- 当前会话操作人
         platformAppInputDTO -- 平台APP相关信息
         context -- The request context for the invocation.
         Returns: A future object for the invocation.
         """
-        def addApplicationAsync(self, accout, platformAppInputDTO, context=None):
-            return _M_com.jimi.user.api.system.ApplicationService._op_addApplication.invokeAsync(self, ((accout, platformAppInputDTO), context))
+        def addApplicationAsync(self, platformAppInputDTO, context=None):
+            return _M_com.jimi.api.user.system.ApplicationApi._op_addApplication.invokeAsync(self, ((platformAppInputDTO, ), context))
 
         """
         添加平台APP信息
         Arguments:
-        accout -- 当前会话操作人
         platformAppInputDTO -- 平台APP相关信息
         _response -- The asynchronous response callback.
         _ex -- The asynchronous exception callback.
@@ -482,44 +529,43 @@ if 'ApplicationServicePrx' not in _M_com.jimi.user.api.system.__dict__:
         context -- The request context for the invocation.
         Returns: An asynchronous result object for the invocation.
         """
-        def begin_addApplication(self, accout, platformAppInputDTO, _response=None, _ex=None, _sent=None, context=None):
-            return _M_com.jimi.user.api.system.ApplicationService._op_addApplication.begin(self, ((accout, platformAppInputDTO), _response, _ex, _sent, context))
+        def begin_addApplication(self, platformAppInputDTO, _response=None, _ex=None, _sent=None, context=None):
+            return _M_com.jimi.api.user.system.ApplicationApi._op_addApplication.begin(self, ((platformAppInputDTO, ), _response, _ex, _sent, context))
 
         """
         添加平台APP信息
         Arguments:
-        accout -- 当前会话操作人
         platformAppInputDTO -- 平台APP相关信息
         Returns: 平新增加平台App信息
         """
         def end_addApplication(self, _r):
-            return _M_com.jimi.user.api.system.ApplicationService._op_addApplication.end(self, _r)
+            return _M_com.jimi.api.user.system.ApplicationApi._op_addApplication.end(self, _r)
 
         """
         删除平台APP信息
         Arguments:
-        accout -- 当前会话操作人
+        account -- 
         appId -- 平台APP相关信息
         context -- The request context for the invocation.
         """
-        def deleteApplicationBy(self, accout, appId, context=None):
-            return _M_com.jimi.user.api.system.ApplicationService._op_deleteApplicationBy.invoke(self, ((accout, appId), context))
+        def deleteApplicationBy(self, account, appId, context=None):
+            return _M_com.jimi.api.user.system.ApplicationApi._op_deleteApplicationBy.invoke(self, ((account, appId), context))
 
         """
         删除平台APP信息
         Arguments:
-        accout -- 当前会话操作人
+        account -- 
         appId -- 平台APP相关信息
         context -- The request context for the invocation.
         Returns: A future object for the invocation.
         """
-        def deleteApplicationByAsync(self, accout, appId, context=None):
-            return _M_com.jimi.user.api.system.ApplicationService._op_deleteApplicationBy.invokeAsync(self, ((accout, appId), context))
+        def deleteApplicationByAsync(self, account, appId, context=None):
+            return _M_com.jimi.api.user.system.ApplicationApi._op_deleteApplicationBy.invokeAsync(self, ((account, appId), context))
 
         """
         删除平台APP信息
         Arguments:
-        accout -- 当前会话操作人
+        account -- 
         appId -- 平台APP相关信息
         _response -- The asynchronous response callback.
         _ex -- The asynchronous exception callback.
@@ -527,43 +573,44 @@ if 'ApplicationServicePrx' not in _M_com.jimi.user.api.system.__dict__:
         context -- The request context for the invocation.
         Returns: An asynchronous result object for the invocation.
         """
-        def begin_deleteApplicationBy(self, accout, appId, _response=None, _ex=None, _sent=None, context=None):
-            return _M_com.jimi.user.api.system.ApplicationService._op_deleteApplicationBy.begin(self, ((accout, appId), _response, _ex, _sent, context))
+        def begin_deleteApplicationBy(self, account, appId, _response=None, _ex=None, _sent=None, context=None):
+            return _M_com.jimi.api.user.system.ApplicationApi._op_deleteApplicationBy.begin(self, ((account, appId), _response, _ex, _sent, context))
 
         """
         删除平台APP信息
         Arguments:
-        accout -- 当前会话操作人
+        account -- 
         appId -- 平台APP相关信息
         """
         def end_deleteApplicationBy(self, _r):
-            return _M_com.jimi.user.api.system.ApplicationService._op_deleteApplicationBy.end(self, _r)
+            return _M_com.jimi.api.user.system.ApplicationApi._op_deleteApplicationBy.end(self, _r)
 
         """
         更新平台App信息
         Arguments:
-        accout -- 当前会话操作人
+        account -- 
         platformAppInputDTO -- 平台APP相关信息
         context -- The request context for the invocation.
+        Returns: 更新后平台APP相关信息
         """
-        def updateApplication(self, accout, platformAppInputDTO, context=None):
-            return _M_com.jimi.user.api.system.ApplicationService._op_updateApplication.invoke(self, ((accout, platformAppInputDTO), context))
+        def updateApplication(self, account, platformAppInputDTO, context=None):
+            return _M_com.jimi.api.user.system.ApplicationApi._op_updateApplication.invoke(self, ((account, platformAppInputDTO), context))
 
         """
         更新平台App信息
         Arguments:
-        accout -- 当前会话操作人
+        account -- 
         platformAppInputDTO -- 平台APP相关信息
         context -- The request context for the invocation.
         Returns: A future object for the invocation.
         """
-        def updateApplicationAsync(self, accout, platformAppInputDTO, context=None):
-            return _M_com.jimi.user.api.system.ApplicationService._op_updateApplication.invokeAsync(self, ((accout, platformAppInputDTO), context))
+        def updateApplicationAsync(self, account, platformAppInputDTO, context=None):
+            return _M_com.jimi.api.user.system.ApplicationApi._op_updateApplication.invokeAsync(self, ((account, platformAppInputDTO), context))
 
         """
         更新平台App信息
         Arguments:
-        accout -- 当前会话操作人
+        account -- 
         platformAppInputDTO -- 平台APP相关信息
         _response -- The asynchronous response callback.
         _ex -- The asynchronous exception callback.
@@ -571,86 +618,133 @@ if 'ApplicationServicePrx' not in _M_com.jimi.user.api.system.__dict__:
         context -- The request context for the invocation.
         Returns: An asynchronous result object for the invocation.
         """
-        def begin_updateApplication(self, accout, platformAppInputDTO, _response=None, _ex=None, _sent=None, context=None):
-            return _M_com.jimi.user.api.system.ApplicationService._op_updateApplication.begin(self, ((accout, platformAppInputDTO), _response, _ex, _sent, context))
+        def begin_updateApplication(self, account, platformAppInputDTO, _response=None, _ex=None, _sent=None, context=None):
+            return _M_com.jimi.api.user.system.ApplicationApi._op_updateApplication.begin(self, ((account, platformAppInputDTO), _response, _ex, _sent, context))
 
         """
         更新平台App信息
         Arguments:
-        accout -- 当前会话操作人
+        account -- 
         platformAppInputDTO -- 平台APP相关信息
+        Returns: 更新后平台APP相关信息
         """
         def end_updateApplication(self, _r):
-            return _M_com.jimi.user.api.system.ApplicationService._op_updateApplication.end(self, _r)
+            return _M_com.jimi.api.user.system.ApplicationApi._op_updateApplication.end(self, _r)
 
         """
         获取所有平台App信息
         Arguments:
-        accout -- 当前会话操作人
+        pageNum -- 页码
+        pageSize -- 页数
         context -- The request context for the invocation.
-        Returns: 平台APP信息列表
+        Returns: 平台APP信息
         """
-        def getAllApplications(self, accout, context=None):
-            return _M_com.jimi.user.api.system.ApplicationService._op_getAllApplications.invoke(self, ((accout, ), context))
+        def getAllApplications(self, pageNum, pageSize, context=None):
+            return _M_com.jimi.api.user.system.ApplicationApi._op_getAllApplications.invoke(self, ((pageNum, pageSize), context))
 
         """
         获取所有平台App信息
         Arguments:
-        accout -- 当前会话操作人
+        pageNum -- 页码
+        pageSize -- 页数
         context -- The request context for the invocation.
         Returns: A future object for the invocation.
         """
-        def getAllApplicationsAsync(self, accout, context=None):
-            return _M_com.jimi.user.api.system.ApplicationService._op_getAllApplications.invokeAsync(self, ((accout, ), context))
+        def getAllApplicationsAsync(self, pageNum, pageSize, context=None):
+            return _M_com.jimi.api.user.system.ApplicationApi._op_getAllApplications.invokeAsync(self, ((pageNum, pageSize), context))
 
         """
         获取所有平台App信息
         Arguments:
-        accout -- 当前会话操作人
+        pageNum -- 页码
+        pageSize -- 页数
         _response -- The asynchronous response callback.
         _ex -- The asynchronous exception callback.
         _sent -- The asynchronous sent callback.
         context -- The request context for the invocation.
         Returns: An asynchronous result object for the invocation.
         """
-        def begin_getAllApplications(self, accout, _response=None, _ex=None, _sent=None, context=None):
-            return _M_com.jimi.user.api.system.ApplicationService._op_getAllApplications.begin(self, ((accout, ), _response, _ex, _sent, context))
+        def begin_getAllApplications(self, pageNum, pageSize, _response=None, _ex=None, _sent=None, context=None):
+            return _M_com.jimi.api.user.system.ApplicationApi._op_getAllApplications.begin(self, ((pageNum, pageSize), _response, _ex, _sent, context))
 
         """
         获取所有平台App信息
         Arguments:
-        accout -- 当前会话操作人
-        Returns: 平台APP信息列表
+        pageNum -- 页码
+        pageSize -- 页数
+        Returns: 平台APP信息
         """
         def end_getAllApplications(self, _r):
-            return _M_com.jimi.user.api.system.ApplicationService._op_getAllApplications.end(self, _r)
+            return _M_com.jimi.api.user.system.ApplicationApi._op_getAllApplications.end(self, _r)
+
+        """
+        获取指定的APP信息
+        Arguments:
+        appId -- AppId
+        context -- The request context for the invocation.
+        Returns: 平台APP信息列表
+        """
+        def getApplicationByAppId(self, appId, context=None):
+            return _M_com.jimi.api.user.system.ApplicationApi._op_getApplicationByAppId.invoke(self, ((appId, ), context))
+
+        """
+        获取指定的APP信息
+        Arguments:
+        appId -- AppId
+        context -- The request context for the invocation.
+        Returns: A future object for the invocation.
+        """
+        def getApplicationByAppIdAsync(self, appId, context=None):
+            return _M_com.jimi.api.user.system.ApplicationApi._op_getApplicationByAppId.invokeAsync(self, ((appId, ), context))
+
+        """
+        获取指定的APP信息
+        Arguments:
+        appId -- AppId
+        _response -- The asynchronous response callback.
+        _ex -- The asynchronous exception callback.
+        _sent -- The asynchronous sent callback.
+        context -- The request context for the invocation.
+        Returns: An asynchronous result object for the invocation.
+        """
+        def begin_getApplicationByAppId(self, appId, _response=None, _ex=None, _sent=None, context=None):
+            return _M_com.jimi.api.user.system.ApplicationApi._op_getApplicationByAppId.begin(self, ((appId, ), _response, _ex, _sent, context))
+
+        """
+        获取指定的APP信息
+        Arguments:
+        appId -- AppId
+        Returns: 平台APP信息列表
+        """
+        def end_getApplicationByAppId(self, _r):
+            return _M_com.jimi.api.user.system.ApplicationApi._op_getApplicationByAppId.end(self, _r)
 
         """
         重置平台APP Client相关内容
         Arguments:
-        accout -- 当前会话操作人
+        account -- 当前会话操作人
         appId -- 平台APP标识
         context -- The request context for the invocation.
         Returns: 重置后平台APP Client Secret
         """
-        def resetApplicationClientSecret(self, accout, appId, context=None):
-            return _M_com.jimi.user.api.system.ApplicationService._op_resetApplicationClientSecret.invoke(self, ((accout, appId), context))
+        def resetApplicationClientSecret(self, account, appId, context=None):
+            return _M_com.jimi.api.user.system.ApplicationApi._op_resetApplicationClientSecret.invoke(self, ((account, appId), context))
 
         """
         重置平台APP Client相关内容
         Arguments:
-        accout -- 当前会话操作人
+        account -- 当前会话操作人
         appId -- 平台APP标识
         context -- The request context for the invocation.
         Returns: A future object for the invocation.
         """
-        def resetApplicationClientSecretAsync(self, accout, appId, context=None):
-            return _M_com.jimi.user.api.system.ApplicationService._op_resetApplicationClientSecret.invokeAsync(self, ((accout, appId), context))
+        def resetApplicationClientSecretAsync(self, account, appId, context=None):
+            return _M_com.jimi.api.user.system.ApplicationApi._op_resetApplicationClientSecret.invokeAsync(self, ((account, appId), context))
 
         """
         重置平台APP Client相关内容
         Arguments:
-        accout -- 当前会话操作人
+        account -- 当前会话操作人
         appId -- 平台APP标识
         _response -- The asynchronous response callback.
         _ex -- The asynchronous exception callback.
@@ -658,45 +752,42 @@ if 'ApplicationServicePrx' not in _M_com.jimi.user.api.system.__dict__:
         context -- The request context for the invocation.
         Returns: An asynchronous result object for the invocation.
         """
-        def begin_resetApplicationClientSecret(self, accout, appId, _response=None, _ex=None, _sent=None, context=None):
-            return _M_com.jimi.user.api.system.ApplicationService._op_resetApplicationClientSecret.begin(self, ((accout, appId), _response, _ex, _sent, context))
+        def begin_resetApplicationClientSecret(self, account, appId, _response=None, _ex=None, _sent=None, context=None):
+            return _M_com.jimi.api.user.system.ApplicationApi._op_resetApplicationClientSecret.begin(self, ((account, appId), _response, _ex, _sent, context))
 
         """
         重置平台APP Client相关内容
         Arguments:
-        accout -- 当前会话操作人
+        account -- 当前会话操作人
         appId -- 平台APP标识
         Returns: 重置后平台APP Client Secret
         """
         def end_resetApplicationClientSecret(self, _r):
-            return _M_com.jimi.user.api.system.ApplicationService._op_resetApplicationClientSecret.end(self, _r)
+            return _M_com.jimi.api.user.system.ApplicationApi._op_resetApplicationClientSecret.end(self, _r)
 
         """
         查看平台APP Client Secret
         Arguments:
-        accout -- 当前会话操作人
         appId -- 平台APP标识
         context -- The request context for the invocation.
         Returns: 平台APP Client Secret
         """
-        def lookupApplicationClientSecret(self, accout, appId, context=None):
-            return _M_com.jimi.user.api.system.ApplicationService._op_lookupApplicationClientSecret.invoke(self, ((accout, appId), context))
+        def lookupApplicationClientSecret(self, appId, context=None):
+            return _M_com.jimi.api.user.system.ApplicationApi._op_lookupApplicationClientSecret.invoke(self, ((appId, ), context))
 
         """
         查看平台APP Client Secret
         Arguments:
-        accout -- 当前会话操作人
         appId -- 平台APP标识
         context -- The request context for the invocation.
         Returns: A future object for the invocation.
         """
-        def lookupApplicationClientSecretAsync(self, accout, appId, context=None):
-            return _M_com.jimi.user.api.system.ApplicationService._op_lookupApplicationClientSecret.invokeAsync(self, ((accout, appId), context))
+        def lookupApplicationClientSecretAsync(self, appId, context=None):
+            return _M_com.jimi.api.user.system.ApplicationApi._op_lookupApplicationClientSecret.invokeAsync(self, ((appId, ), context))
 
         """
         查看平台APP Client Secret
         Arguments:
-        accout -- 当前会话操作人
         appId -- 平台APP标识
         _response -- The asynchronous response callback.
         _ex -- The asynchronous exception callback.
@@ -704,107 +795,115 @@ if 'ApplicationServicePrx' not in _M_com.jimi.user.api.system.__dict__:
         context -- The request context for the invocation.
         Returns: An asynchronous result object for the invocation.
         """
-        def begin_lookupApplicationClientSecret(self, accout, appId, _response=None, _ex=None, _sent=None, context=None):
-            return _M_com.jimi.user.api.system.ApplicationService._op_lookupApplicationClientSecret.begin(self, ((accout, appId), _response, _ex, _sent, context))
+        def begin_lookupApplicationClientSecret(self, appId, _response=None, _ex=None, _sent=None, context=None):
+            return _M_com.jimi.api.user.system.ApplicationApi._op_lookupApplicationClientSecret.begin(self, ((appId, ), _response, _ex, _sent, context))
 
         """
         查看平台APP Client Secret
         Arguments:
-        accout -- 当前会话操作人
         appId -- 平台APP标识
         Returns: 平台APP Client Secret
         """
         def end_lookupApplicationClientSecret(self, _r):
-            return _M_com.jimi.user.api.system.ApplicationService._op_lookupApplicationClientSecret.end(self, _r)
+            return _M_com.jimi.api.user.system.ApplicationApi._op_lookupApplicationClientSecret.end(self, _r)
 
         @staticmethod
         def checkedCast(proxy, facetOrContext=None, context=None):
-            return _M_com.jimi.user.api.system.ApplicationServicePrx.ice_checkedCast(proxy, '::com::jimi::user::api::system::ApplicationService', facetOrContext, context)
+            return _M_com.jimi.api.user.system.ApplicationApiPrx.ice_checkedCast(proxy, '::com::jimi::api::user::system::ApplicationApi', facetOrContext, context)
 
         @staticmethod
         def uncheckedCast(proxy, facet=None):
-            return _M_com.jimi.user.api.system.ApplicationServicePrx.ice_uncheckedCast(proxy, facet)
+            return _M_com.jimi.api.user.system.ApplicationApiPrx.ice_uncheckedCast(proxy, facet)
 
         @staticmethod
         def ice_staticId():
-            return '::com::jimi::user::api::system::ApplicationService'
-    _M_com.jimi.user.api.system._t_ApplicationServicePrx = IcePy.defineProxy('::com::jimi::user::api::system::ApplicationService', ApplicationServicePrx)
+            return '::com::jimi::api::user::system::ApplicationApi'
+    _M_com.jimi.api.user.system._t_ApplicationApiPrx = IcePy.defineProxy('::com::jimi::api::user::system::ApplicationApi', ApplicationApiPrx)
 
-    _M_com.jimi.user.api.system.ApplicationServicePrx = ApplicationServicePrx
-    del ApplicationServicePrx
+    _M_com.jimi.api.user.system.ApplicationApiPrx = ApplicationApiPrx
+    del ApplicationApiPrx
 
-    _M_com.jimi.user.api.system.ApplicationService = Ice.createTempClass()
-    class ApplicationService(Ice.Object):
+    _M_com.jimi.api.user.system.ApplicationApi = Ice.createTempClass()
+    class ApplicationApi(Ice.Object):
 
         def ice_ids(self, current=None):
-            return ('::Ice::Object', '::com::jimi::user::api::system::ApplicationService')
+            return ('::Ice::Object', '::com::jimi::api::user::system::ApplicationApi')
 
         def ice_id(self, current=None):
-            return '::com::jimi::user::api::system::ApplicationService'
+            return '::com::jimi::api::user::system::ApplicationApi'
 
         @staticmethod
         def ice_staticId():
-            return '::com::jimi::user::api::system::ApplicationService'
+            return '::com::jimi::api::user::system::ApplicationApi'
 
-        def addApplication(self, accout, platformAppInputDTO, current=None):
+        def addApplication(self, platformAppInputDTO, current=None):
             """
             添加平台APP信息
             Arguments:
-            accout -- 当前会话操作人
             platformAppInputDTO -- 平台APP相关信息
             current -- The Current object for the invocation.
             Returns: A future object for the invocation.
             """
             raise NotImplementedError("servant method 'addApplication' not implemented")
 
-        def deleteApplicationBy(self, accout, appId, current=None):
+        def deleteApplicationBy(self, account, appId, current=None):
             """
             删除平台APP信息
             Arguments:
-            accout -- 当前会话操作人
+            account -- 
             appId -- 平台APP相关信息
             current -- The Current object for the invocation.
             Returns: A future object for the invocation.
             """
             raise NotImplementedError("servant method 'deleteApplicationBy' not implemented")
 
-        def updateApplication(self, accout, platformAppInputDTO, current=None):
+        def updateApplication(self, account, platformAppInputDTO, current=None):
             """
             更新平台App信息
             Arguments:
-            accout -- 当前会话操作人
+            account -- 
             platformAppInputDTO -- 平台APP相关信息
             current -- The Current object for the invocation.
             Returns: A future object for the invocation.
             """
             raise NotImplementedError("servant method 'updateApplication' not implemented")
 
-        def getAllApplications(self, accout, current=None):
+        def getAllApplications(self, pageNum, pageSize, current=None):
             """
             获取所有平台App信息
             Arguments:
-            accout -- 当前会话操作人
+            pageNum -- 页码
+            pageSize -- 页数
             current -- The Current object for the invocation.
             Returns: A future object for the invocation.
             """
             raise NotImplementedError("servant method 'getAllApplications' not implemented")
 
-        def resetApplicationClientSecret(self, accout, appId, current=None):
+        def getApplicationByAppId(self, appId, current=None):
+            """
+            获取指定的APP信息
+            Arguments:
+            appId -- AppId
+            current -- The Current object for the invocation.
+            Returns: A future object for the invocation.
+            """
+            raise NotImplementedError("servant method 'getApplicationByAppId' not implemented")
+
+        def resetApplicationClientSecret(self, account, appId, current=None):
             """
             重置平台APP Client相关内容
             Arguments:
-            accout -- 当前会话操作人
+            account -- 当前会话操作人
             appId -- 平台APP标识
             current -- The Current object for the invocation.
             Returns: A future object for the invocation.
             """
             raise NotImplementedError("servant method 'resetApplicationClientSecret' not implemented")
 
-        def lookupApplicationClientSecret(self, accout, appId, current=None):
+        def lookupApplicationClientSecret(self, appId, current=None):
             """
             查看平台APP Client Secret
             Arguments:
-            accout -- 当前会话操作人
             appId -- 平台APP标识
             current -- The Current object for the invocation.
             Returns: A future object for the invocation.
@@ -812,32 +911,33 @@ if 'ApplicationServicePrx' not in _M_com.jimi.user.api.system.__dict__:
             raise NotImplementedError("servant method 'lookupApplicationClientSecret' not implemented")
 
         def __str__(self):
-            return IcePy.stringify(self, _M_com.jimi.user.api.system._t_ApplicationServiceDisp)
+            return IcePy.stringify(self, _M_com.jimi.api.user.system._t_ApplicationApiDisp)
 
         __repr__ = __str__
 
-    _M_com.jimi.user.api.system._t_ApplicationServiceDisp = IcePy.defineClass('::com::jimi::user::api::system::ApplicationService', ApplicationService, (), None, ())
-    ApplicationService._ice_type = _M_com.jimi.user.api.system._t_ApplicationServiceDisp
+    _M_com.jimi.api.user.system._t_ApplicationApiDisp = IcePy.defineClass('::com::jimi::api::user::system::ApplicationApi', ApplicationApi, (), None, ())
+    ApplicationApi._ice_type = _M_com.jimi.api.user.system._t_ApplicationApiDisp
 
-    ApplicationService._op_addApplication = IcePy.Operation('addApplication', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.user.api.system.dto._t_CurrentAccount, False, 0), ((), _M_com.jimi.user.api.system.dto._t_PlatformAppInputDTO, False, 0)), (), ((), _M_com.jimi.user.api.system.dto._t_PlatformAppOutputDTO, False, 0), ())
-    ApplicationService._op_deleteApplicationBy = IcePy.Operation('deleteApplicationBy', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.user.api.system.dto._t_CurrentAccount, False, 0), ((), IcePy._t_string, False, 0)), (), None, ())
-    ApplicationService._op_updateApplication = IcePy.Operation('updateApplication', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.user.api.system.dto._t_CurrentAccount, False, 0), ((), _M_com.jimi.user.api.system.dto._t_PlatformAppInputDTO, False, 0)), (), None, ())
-    ApplicationService._op_getAllApplications = IcePy.Operation('getAllApplications', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.user.api.system.dto._t_CurrentAccount, False, 0),), (), ((), _M_com.jimi.user.api.system._t_PlatformAppList, False, 0), ())
-    ApplicationService._op_resetApplicationClientSecret = IcePy.Operation('resetApplicationClientSecret', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.user.api.system.dto._t_CurrentAccount, False, 0), ((), IcePy._t_string, False, 0)), (), ((), IcePy._t_string, False, 0), ())
-    ApplicationService._op_lookupApplicationClientSecret = IcePy.Operation('lookupApplicationClientSecret', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.user.api.system.dto._t_CurrentAccount, False, 0), ((), IcePy._t_string, False, 0)), (), ((), IcePy._t_string, False, 0), ())
+    ApplicationApi._op_addApplication = IcePy.Operation('addApplication', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.api.user.system.dto._t_PlatformAppInputDTO, False, 0),), (), ((), _M_com.jimi.api.user.system.dto._t_PlatformAppOutputDTO, False, 0), (_M_com.jimi.api._t_ApiException,))
+    ApplicationApi._op_deleteApplicationBy = IcePy.Operation('deleteApplicationBy', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.api._t_CurrentAccount, False, 0), ((), IcePy._t_string, False, 0)), (), None, (_M_com.jimi.api._t_ApiException,))
+    ApplicationApi._op_updateApplication = IcePy.Operation('updateApplication', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.api._t_CurrentAccount, False, 0), ((), _M_com.jimi.api.user.system.dto._t_PlatformAppInputDTO, False, 0)), (), ((), IcePy._t_bool, False, 0), ())
+    ApplicationApi._op_getAllApplications = IcePy.Operation('getAllApplications', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), IcePy._t_int, False, 0), ((), IcePy._t_int, False, 0)), (), ((), _M_com.jimi.api.user.system._t_PlatformAppList, False, 0), ())
+    ApplicationApi._op_getApplicationByAppId = IcePy.Operation('getApplicationByAppId', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), IcePy._t_string, False, 0),), (), ((), _M_com.jimi.api.user.system.dto._t_PlatformAppOutputDTO, False, 0), ())
+    ApplicationApi._op_resetApplicationClientSecret = IcePy.Operation('resetApplicationClientSecret', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.api._t_CurrentAccount, False, 0), ((), IcePy._t_string, False, 0)), (), ((), IcePy._t_string, False, 0), (_M_com.jimi.api._t_ApiException,))
+    ApplicationApi._op_lookupApplicationClientSecret = IcePy.Operation('lookupApplicationClientSecret', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), IcePy._t_string, False, 0),), (), ((), IcePy._t_string, False, 0), (_M_com.jimi.api._t_ApiException,))
 
-    _M_com.jimi.user.api.system.ApplicationService = ApplicationService
-    del ApplicationService
+    _M_com.jimi.api.user.system.ApplicationApi = ApplicationApi
+    del ApplicationApi
 
-# End of module com.jimi.user.api.system
+# End of module com.jimi.api.user.system
 
-__name__ = 'com.jimi.user.api'
+__name__ = 'com.jimi.api.user'
 
-# End of module com.jimi.user.api
+# End of module com.jimi.api.user
 
-__name__ = 'com.jimi.user'
+__name__ = 'com.jimi.api'
 
-# End of module com.jimi.user
+# End of module com.jimi.api
 
 __name__ = 'com.jimi'
 
