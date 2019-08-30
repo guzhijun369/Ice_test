@@ -9,10 +9,24 @@ module com { module jimi { module api {
     enum ErrorCode {
         /** 未知错误*/
         Unknown,
-        /** 不存在*/
         NotFound,
-        /** 已存在*/
-        Existed
+        Existed,
+        /** 用户不存在*/
+        UserNotFound,
+        /** 用户已存在*/
+        UserExisted,
+        /** 机构不存在*/
+        OrganizationNotFound,
+        /** 机构已存在*/
+        OrganizationExisted,
+        /** 机构类型不存在*/
+        OrganizationTypeNotFound,
+        /** 机构类型已存在*/
+        OrganizationTypeExisted,
+        /** 平台编码不存在*/
+        PlatformCodeNotFound,
+        /** 平台编码已存在*/
+        PlatformCodeExisted,
     }
     /**
      * Api接口异常类
@@ -35,7 +49,7 @@ module com { module jimi { module api {
      ["java:getset"]
     class BaseInputDTO {
         /** 操作人*/
-        long operator;
+        string operator;
         /** 平台code*/
         string platform;
     }
@@ -50,6 +64,7 @@ module com { module jimi { module api {
     class BasePageInputDTO extends BaseInputDTO{
         /** 页面*/
         int page = 1;
+        /** 数量*/
         int size = 20;
     }
     /**
@@ -61,6 +76,20 @@ module com { module jimi { module api {
      */
      ["java:getset"]
     class BaseOutputDTO {}
+    /**
+     * 分页输出DTO
+     *
+     * @author zhangduanfeng
+     * @date 2019-08-26
+     * @since 1.0.0
+     */
+     ["java:getset"]
+    class BasePageOutputDTO extends BaseOutputDTO {
+        long size;
+        long page;
+        long totalPage;
+        long totalSize;
+    }
 
     /**
      * 当前会话账号信息
@@ -74,11 +103,11 @@ module com { module jimi { module api {
         /**
          * 账号id
          **/
-        long uid;
+        string uid;
         /**
          * 机构id
          **/
-        long oid;
+        string oid;
         /**
          * 平台code
          **/

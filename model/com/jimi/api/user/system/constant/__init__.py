@@ -2,10 +2,9 @@
 #
 
 import Ice
-Ice.updateModule("com.jimi.api.user.system.dto")
+Ice.updateModule("com.jimi.api.user.system.constant")
 
 # Modules:
-import platform_dto_ice
 import system_member_dto_ice
 
 # Submodules:

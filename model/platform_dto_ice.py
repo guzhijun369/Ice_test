@@ -105,7 +105,7 @@ if 'PlatformAppInputDTO' not in _M_com.jimi.api.user.system.dto.__dict__:
         smsId -- 短信ID
         push -- 平台APP配置推送信息
         """
-        def __init__(self, operator=0, platform='', appId='', icon='', name='', type=0, code='', domain='', contact='', production=False, smsId='', push=None):
+        def __init__(self, operator='', platform='', appId='', icon='', name='', type=0, code='', domain='', contact='', production=False, smsId='', push=None):
             _M_com.jimi.api.BaseInputDTO.__init__(self, operator, platform)
             self.appId = appId
             self.icon = icon
@@ -163,7 +163,7 @@ if 'PlatformInputDTO' not in _M_com.jimi.api.user.system.dto.__dict__:
         address -- 平台地址
         desc -- 平台描述
         """
-        def __init__(self, operator=0, platform='', code='', name='', address='', desc=''):
+        def __init__(self, operator='', platform='', code='', name='', address='', desc=''):
             _M_com.jimi.api.BaseInputDTO.__init__(self, operator, platform)
             self.code = code
             self.name = name

@@ -100,7 +100,7 @@ module system {
          * @param platformAppInputDTO 平台APP相关信息
          * @return 更新后平台APP相关信息
          */
-        bool updateApplication(com::jimi::api::CurrentAccount account, dto::PlatformAppInputDTO platformAppInputDTO);
+        bool updateApplication(com::jimi::api::CurrentAccount account, dto::PlatformAppInputDTO platformAppInputDTO) throws com::jimi::api::ApiException;
 
         /**
          * 获取所有平台App信息

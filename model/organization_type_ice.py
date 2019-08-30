@@ -169,27 +169,27 @@ if 'OrganizationTypeApiPrx' not in _M_com.jimi.api.user.organization.__dict__:
             return _M_com.jimi.api.user.organization.OrganizationTypeApi._op_addOrganizationType.end(self, _r)
 
         """
-        更新机构类型
+        更新机构类型信息
         Arguments:
         organizationTypeInputDTO -- 
         context -- The request context for the invocation.
         Returns: 更新后机构类型信息
         """
-        def updatePlatform(self, organizationTypeInputDTO, context=None):
-            return _M_com.jimi.api.user.organization.OrganizationTypeApi._op_updatePlatform.invoke(self, ((organizationTypeInputDTO, ), context))
+        def updateOrganizationType(self, organizationTypeInputDTO, context=None):
+            return _M_com.jimi.api.user.organization.OrganizationTypeApi._op_updateOrganizationType.invoke(self, ((organizationTypeInputDTO, ), context))
 
         """
-        更新机构类型
+        更新机构类型信息
         Arguments:
         organizationTypeInputDTO -- 
         context -- The request context for the invocation.
         Returns: A future object for the invocation.
         """
-        def updatePlatformAsync(self, organizationTypeInputDTO, context=None):
-            return _M_com.jimi.api.user.organization.OrganizationTypeApi._op_updatePlatform.invokeAsync(self, ((organizationTypeInputDTO, ), context))
+        def updateOrganizationTypeAsync(self, organizationTypeInputDTO, context=None):
+            return _M_com.jimi.api.user.organization.OrganizationTypeApi._op_updateOrganizationType.invokeAsync(self, ((organizationTypeInputDTO, ), context))
 
         """
-        更新机构类型
+        更新机构类型信息
         Arguments:
         organizationTypeInputDTO -- 
         _response -- The asynchronous response callback.
@@ -198,17 +198,17 @@ if 'OrganizationTypeApiPrx' not in _M_com.jimi.api.user.organization.__dict__:
         context -- The request context for the invocation.
         Returns: An asynchronous result object for the invocation.
         """
-        def begin_updatePlatform(self, organizationTypeInputDTO, _response=None, _ex=None, _sent=None, context=None):
-            return _M_com.jimi.api.user.organization.OrganizationTypeApi._op_updatePlatform.begin(self, ((organizationTypeInputDTO, ), _response, _ex, _sent, context))
+        def begin_updateOrganizationType(self, organizationTypeInputDTO, _response=None, _ex=None, _sent=None, context=None):
+            return _M_com.jimi.api.user.organization.OrganizationTypeApi._op_updateOrganizationType.begin(self, ((organizationTypeInputDTO, ), _response, _ex, _sent, context))
 
         """
-        更新机构类型
+        更新机构类型信息
         Arguments:
         organizationTypeInputDTO -- 
         Returns: 更新后机构类型信息
         """
-        def end_updatePlatform(self, _r):
-            return _M_com.jimi.api.user.organization.OrganizationTypeApi._op_updatePlatform.end(self, _r)
+        def end_updateOrganizationType(self, _r):
+            return _M_com.jimi.api.user.organization.OrganizationTypeApi._op_updateOrganizationType.end(self, _r)
 
         """
         获取所有机构类型列表
@@ -261,7 +261,7 @@ if 'OrganizationTypeApiPrx' not in _M_com.jimi.api.user.organization.__dict__:
             return _M_com.jimi.api.user.organization.OrganizationTypeApi._op_findOrganizationTypeByPlatform.end(self, _r)
 
         """
-        根据机构类型编码机构类型
+        根据机构类型编码查看机构类型信息
         Arguments:
         organizationTypeCode -- 机构类型编码
         context -- The request context for the invocation.
@@ -271,7 +271,7 @@ if 'OrganizationTypeApiPrx' not in _M_com.jimi.api.user.organization.__dict__:
             return _M_com.jimi.api.user.organization.OrganizationTypeApi._op_findOrganizationTypeByCode.invoke(self, ((organizationTypeCode, ), context))
 
         """
-        根据机构类型编码机构类型
+        根据机构类型编码查看机构类型信息
         Arguments:
         organizationTypeCode -- 机构类型编码
         context -- The request context for the invocation.
@@ -281,7 +281,7 @@ if 'OrganizationTypeApiPrx' not in _M_com.jimi.api.user.organization.__dict__:
             return _M_com.jimi.api.user.organization.OrganizationTypeApi._op_findOrganizationTypeByCode.invokeAsync(self, ((organizationTypeCode, ), context))
 
         """
-        根据机构类型编码机构类型
+        根据机构类型编码查看机构类型信息
         Arguments:
         organizationTypeCode -- 机构类型编码
         _response -- The asynchronous response callback.
@@ -294,7 +294,7 @@ if 'OrganizationTypeApiPrx' not in _M_com.jimi.api.user.organization.__dict__:
             return _M_com.jimi.api.user.organization.OrganizationTypeApi._op_findOrganizationTypeByCode.begin(self, ((organizationTypeCode, ), _response, _ex, _sent, context))
 
         """
-        根据机构类型编码机构类型
+        根据机构类型编码查看机构类型信息
         Arguments:
         organizationTypeCode -- 机构类型编码
         Returns: 机构类型信息
@@ -309,8 +309,8 @@ if 'OrganizationTypeApiPrx' not in _M_com.jimi.api.user.organization.__dict__:
         organizationTypeCode -- 机构类型编码
         context -- The request context for the invocation.
         """
-        def deletePlatformBy(self, account, organizationTypeCode, context=None):
-            return _M_com.jimi.api.user.organization.OrganizationTypeApi._op_deletePlatformBy.invoke(self, ((account, organizationTypeCode), context))
+        def deleteOrganizationTypeBy(self, account, organizationTypeCode, context=None):
+            return _M_com.jimi.api.user.organization.OrganizationTypeApi._op_deleteOrganizationTypeBy.invoke(self, ((account, organizationTypeCode), context))
 
         """
         删除机构类型
@@ -320,8 +320,8 @@ if 'OrganizationTypeApiPrx' not in _M_com.jimi.api.user.organization.__dict__:
         context -- The request context for the invocation.
         Returns: A future object for the invocation.
         """
-        def deletePlatformByAsync(self, account, organizationTypeCode, context=None):
-            return _M_com.jimi.api.user.organization.OrganizationTypeApi._op_deletePlatformBy.invokeAsync(self, ((account, organizationTypeCode), context))
+        def deleteOrganizationTypeByAsync(self, account, organizationTypeCode, context=None):
+            return _M_com.jimi.api.user.organization.OrganizationTypeApi._op_deleteOrganizationTypeBy.invokeAsync(self, ((account, organizationTypeCode), context))
 
         """
         删除机构类型
@@ -334,8 +334,8 @@ if 'OrganizationTypeApiPrx' not in _M_com.jimi.api.user.organization.__dict__:
         context -- The request context for the invocation.
         Returns: An asynchronous result object for the invocation.
         """
-        def begin_deletePlatformBy(self, account, organizationTypeCode, _response=None, _ex=None, _sent=None, context=None):
-            return _M_com.jimi.api.user.organization.OrganizationTypeApi._op_deletePlatformBy.begin(self, ((account, organizationTypeCode), _response, _ex, _sent, context))
+        def begin_deleteOrganizationTypeBy(self, account, organizationTypeCode, _response=None, _ex=None, _sent=None, context=None):
+            return _M_com.jimi.api.user.organization.OrganizationTypeApi._op_deleteOrganizationTypeBy.begin(self, ((account, organizationTypeCode), _response, _ex, _sent, context))
 
         """
         删除机构类型
@@ -343,8 +343,8 @@ if 'OrganizationTypeApiPrx' not in _M_com.jimi.api.user.organization.__dict__:
         account -- 操作人
         organizationTypeCode -- 机构类型编码
         """
-        def end_deletePlatformBy(self, _r):
-            return _M_com.jimi.api.user.organization.OrganizationTypeApi._op_deletePlatformBy.end(self, _r)
+        def end_deleteOrganizationTypeBy(self, _r):
+            return _M_com.jimi.api.user.organization.OrganizationTypeApi._op_deleteOrganizationTypeBy.end(self, _r)
 
         @staticmethod
         def checkedCast(proxy, facetOrContext=None, context=None):
@@ -401,15 +401,15 @@ if 'OrganizationTypeApiPrx' not in _M_com.jimi.api.user.organization.__dict__:
             """
             raise NotImplementedError("servant method 'addOrganizationType' not implemented")
 
-        def updatePlatform(self, organizationTypeInputDTO, current=None):
+        def updateOrganizationType(self, organizationTypeInputDTO, current=None):
             """
-            更新机构类型
+            更新机构类型信息
             Arguments:
             organizationTypeInputDTO -- 
             current -- The Current object for the invocation.
             Returns: A future object for the invocation.
             """
-            raise NotImplementedError("servant method 'updatePlatform' not implemented")
+            raise NotImplementedError("servant method 'updateOrganizationType' not implemented")
 
         def findOrganizationTypeByPlatform(self, platform, pageNum, pageSize, current=None):
             """
@@ -425,7 +425,7 @@ if 'OrganizationTypeApiPrx' not in _M_com.jimi.api.user.organization.__dict__:
 
         def findOrganizationTypeByCode(self, organizationTypeCode, current=None):
             """
-            根据机构类型编码机构类型
+            根据机构类型编码查看机构类型信息
             Arguments:
             organizationTypeCode -- 机构类型编码
             current -- The Current object for the invocation.
@@ -433,7 +433,7 @@ if 'OrganizationTypeApiPrx' not in _M_com.jimi.api.user.organization.__dict__:
             """
             raise NotImplementedError("servant method 'findOrganizationTypeByCode' not implemented")
 
-        def deletePlatformBy(self, account, organizationTypeCode, current=None):
+        def deleteOrganizationTypeBy(self, account, organizationTypeCode, current=None):
             """
             删除机构类型
             Arguments:
@@ -442,7 +442,7 @@ if 'OrganizationTypeApiPrx' not in _M_com.jimi.api.user.organization.__dict__:
             current -- The Current object for the invocation.
             Returns: A future object for the invocation.
             """
-            raise NotImplementedError("servant method 'deletePlatformBy' not implemented")
+            raise NotImplementedError("servant method 'deleteOrganizationTypeBy' not implemented")
 
         def __str__(self):
             return IcePy.stringify(self, _M_com.jimi.api.user.organization._t_OrganizationTypeApiDisp)
@@ -454,10 +454,10 @@ if 'OrganizationTypeApiPrx' not in _M_com.jimi.api.user.organization.__dict__:
 
     OrganizationTypeApi._op_existsByCode = IcePy.Operation('existsByCode', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), IcePy._t_string, False, 0),), (), ((), IcePy._t_bool, False, 0), (_M_com.jimi.api._t_ApiException,))
     OrganizationTypeApi._op_addOrganizationType = IcePy.Operation('addOrganizationType', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.api.user.organization.dto._t_OrganizationTypeInputDTO, False, 0),), (), ((), _M_com.jimi.api.user.organization.dto._t_OrganizationTypeOutputDTO, False, 0), (_M_com.jimi.api._t_ApiException,))
-    OrganizationTypeApi._op_updatePlatform = IcePy.Operation('updatePlatform', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.api.user.organization.dto._t_OrganizationTypeInputDTO, False, 0),), (), ((), IcePy._t_bool, False, 0), (_M_com.jimi.api._t_ApiException,))
+    OrganizationTypeApi._op_updateOrganizationType = IcePy.Operation('updateOrganizationType', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.api.user.organization.dto._t_OrganizationTypeInputDTO, False, 0),), (), ((), IcePy._t_bool, False, 0), (_M_com.jimi.api._t_ApiException,))
     OrganizationTypeApi._op_findOrganizationTypeByPlatform = IcePy.Operation('findOrganizationTypeByPlatform', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), IcePy._t_string, False, 0), ((), IcePy._t_int, False, 0), ((), IcePy._t_int, False, 0)), (), ((), _M_com.jimi.api.user.organization._t_OrganizationTypeList, False, 0), ())
     OrganizationTypeApi._op_findOrganizationTypeByCode = IcePy.Operation('findOrganizationTypeByCode', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), IcePy._t_string, False, 0),), (), ((), _M_com.jimi.api.user.organization.dto._t_OrganizationTypeOutputDTO, False, 0), ())
-    OrganizationTypeApi._op_deletePlatformBy = IcePy.Operation('deletePlatformBy', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.api._t_CurrentAccount, False, 0), ((), IcePy._t_string, False, 0)), (), None, (_M_com.jimi.api._t_ApiException,))
+    OrganizationTypeApi._op_deleteOrganizationTypeBy = IcePy.Operation('deleteOrganizationTypeBy', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), _M_com.jimi.api._t_CurrentAccount, False, 0), ((), IcePy._t_string, False, 0)), (), None, (_M_com.jimi.api._t_ApiException,))
 
     _M_com.jimi.api.user.organization.OrganizationTypeApi = OrganizationTypeApi
     del OrganizationTypeApi

@@ -33,12 +33,12 @@ module organization{
         dto::OrganizationTypeOutputDTO addOrganizationType(dto::OrganizationTypeInputDTO organizationTypeInputDTO) throws com::jimi::api::ApiException;
 
         /**
-         * 更新机构类型
+         * 更新机构类型信息
          *
          * @param organizationTypeInputDTO
          * @return 更新后机构类型信息
          */
-        bool updatePlatform(dto::OrganizationTypeInputDTO organizationTypeInputDTO) throws com::jimi::api::ApiException;
+        bool updateOrganizationType(dto::OrganizationTypeInputDTO organizationTypeInputDTO) throws com::jimi::api::ApiException;
 
         /**
          * 获取所有机构类型列表
@@ -51,7 +51,7 @@ module organization{
         OrganizationTypeList findOrganizationTypeByPlatform(string platform, int pageNum, int pageSize);
 
         /**
-         * 根据机构类型编码机构类型
+         * 根据机构类型编码查看机构类型信息
          *
          * @param organizationTypeCode 机构类型编码
          * @return 机构类型信息
@@ -65,7 +65,7 @@ module organization{
          * @param organizationTypeCode 机构类型编码
          * @return void
          */
-        void deletePlatformBy(com::jimi::api::CurrentAccount account, string organizationTypeCode) throws com::jimi::api::ApiException;
+        void deleteOrganizationTypeBy(com::jimi::api::CurrentAccount account, string organizationTypeCode) throws com::jimi::api::ApiException;
     }
 }
 }}}}

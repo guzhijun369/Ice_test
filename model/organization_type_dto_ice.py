@@ -60,7 +60,7 @@ if 'OrganizationTypeInputDTO' not in _M_com.jimi.api.user.organization.dto.__dic
         code -- 机构类型code
         name -- 机构类名称
         """
-        def __init__(self, operator=0, platform='', code='', name=''):
+        def __init__(self, operator='', platform='', code='', name=''):
             _M_com.jimi.api.BaseInputDTO.__init__(self, operator, platform)
             self.code = code
             self.name = name

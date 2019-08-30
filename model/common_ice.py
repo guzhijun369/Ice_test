@@ -39,8 +39,16 @@ if 'ErrorCode' not in _M_com.jimi.api.__dict__:
         @since 1.0.0
         Enumerators:
         Unknown -- 未知错误
-        NotFound -- 不存在
-        Existed -- 已存在
+        NotFound -- 
+        Existed -- 
+        UserNotFound -- 用户不存在
+        UserExisted -- 用户已存在
+        OrganizationNotFound -- 机构不存在
+        OrganizationExisted -- 机构已存在
+        OrganizationTypeNotFound -- 机构类型不存在
+        OrganizationTypeExisted -- 机构类型已存在
+        PlatformCodeNotFound -- 平台编码不存在
+        PlatformCodeExisted -- 平台编码已存在
         """
 
         def __init__(self, _n, _v):
@@ -55,7 +63,15 @@ if 'ErrorCode' not in _M_com.jimi.api.__dict__:
     ErrorCode.Unknown = ErrorCode("Unknown", 0)
     ErrorCode.NotFound = ErrorCode("NotFound", 1)
     ErrorCode.Existed = ErrorCode("Existed", 2)
-    ErrorCode._enumerators = { 0:ErrorCode.Unknown, 1:ErrorCode.NotFound, 2:ErrorCode.Existed }
+    ErrorCode.UserNotFound = ErrorCode("UserNotFound", 3)
+    ErrorCode.UserExisted = ErrorCode("UserExisted", 4)
+    ErrorCode.OrganizationNotFound = ErrorCode("OrganizationNotFound", 5)
+    ErrorCode.OrganizationExisted = ErrorCode("OrganizationExisted", 6)
+    ErrorCode.OrganizationTypeNotFound = ErrorCode("OrganizationTypeNotFound", 7)
+    ErrorCode.OrganizationTypeExisted = ErrorCode("OrganizationTypeExisted", 8)
+    ErrorCode.PlatformCodeNotFound = ErrorCode("PlatformCodeNotFound", 9)
+    ErrorCode.PlatformCodeExisted = ErrorCode("PlatformCodeExisted", 10)
+    ErrorCode._enumerators = { 0:ErrorCode.Unknown, 1:ErrorCode.NotFound, 2:ErrorCode.Existed, 3:ErrorCode.UserNotFound, 4:ErrorCode.UserExisted, 5:ErrorCode.OrganizationNotFound, 6:ErrorCode.OrganizationExisted, 7:ErrorCode.OrganizationTypeNotFound, 8:ErrorCode.OrganizationTypeExisted, 9:ErrorCode.PlatformCodeNotFound, 10:ErrorCode.PlatformCodeExisted }
 
     _M_com.jimi.api._t_ErrorCode = IcePy.defineEnum('::com::jimi::api::ErrorCode', ErrorCode, (), ErrorCode._enumerators)
 
@@ -101,7 +117,7 @@ if 'BaseInputDTO' not in _M_com.jimi.api.__dict__:
         operator -- 操作人
         platform -- 平台code
         """
-        def __init__(self, operator=0, platform=''):
+        def __init__(self, operator='', platform=''):
             self.operator = operator
             self.platform = platform
 
@@ -118,7 +134,7 @@ if 'BaseInputDTO' not in _M_com.jimi.api.__dict__:
         __repr__ = __str__
 
     _M_com.jimi.api._t_BaseInputDTO = IcePy.defineValue('::com::jimi::api::BaseInputDTO', BaseInputDTO, -1, (), False, False, None, (
-        ('operator', (), IcePy._t_long, False, 0),
+        ('operator', (), IcePy._t_string, False, 0),
         ('platform', (), IcePy._t_string, False, 0)
     ))
     BaseInputDTO._ice_type = _M_com.jimi.api._t_BaseInputDTO
@@ -136,9 +152,9 @@ if 'BasePageInputDTO' not in _M_com.jimi.api.__dict__:
         @since 1.0.0
         Members:
         page -- 页面
-        size -- 
+        size -- 数量
         """
-        def __init__(self, operator=0, platform='', page=1, size=20):
+        def __init__(self, operator='', platform='', page=1, size=20):
             _M_com.jimi.api.BaseInputDTO.__init__(self, operator, platform)
             self.page = page
             self.size = size
@@ -194,6 +210,45 @@ if 'BaseOutputDTO' not in _M_com.jimi.api.__dict__:
     _M_com.jimi.api.BaseOutputDTO = BaseOutputDTO
     del BaseOutputDTO
 
+if 'BasePageOutputDTO' not in _M_com.jimi.api.__dict__:
+    _M_com.jimi.api.BasePageOutputDTO = Ice.createTempClass()
+    class BasePageOutputDTO(_M_com.jimi.api.BaseOutputDTO):
+        """
+        分页输出DTO
+        @author zhangduanfeng
+        @date 2019-08-26
+        @since 1.0.0
+        """
+        def __init__(self, size=0, page=0, totalPage=0, totalSize=0):
+            _M_com.jimi.api.BaseOutputDTO.__init__(self)
+            self.size = size
+            self.page = page
+            self.totalPage = totalPage
+            self.totalSize = totalSize
+
+        def ice_id(self):
+            return '::com::jimi::api::BasePageOutputDTO'
+
+        @staticmethod
+        def ice_staticId():
+            return '::com::jimi::api::BasePageOutputDTO'
+
+        def __str__(self):
+            return IcePy.stringify(self, _M_com.jimi.api._t_BasePageOutputDTO)
+
+        __repr__ = __str__
+
+    _M_com.jimi.api._t_BasePageOutputDTO = IcePy.defineValue('::com::jimi::api::BasePageOutputDTO', BasePageOutputDTO, -1, (), False, False, _M_com.jimi.api._t_BaseOutputDTO, (
+        ('size', (), IcePy._t_long, False, 0),
+        ('page', (), IcePy._t_long, False, 0),
+        ('totalPage', (), IcePy._t_long, False, 0),
+        ('totalSize', (), IcePy._t_long, False, 0)
+    ))
+    BasePageOutputDTO._ice_type = _M_com.jimi.api._t_BasePageOutputDTO
+
+    _M_com.jimi.api.BasePageOutputDTO = BasePageOutputDTO
+    del BasePageOutputDTO
+
 if 'CurrentAccount' not in _M_com.jimi.api.__dict__:
     _M_com.jimi.api.CurrentAccount = Ice.createTempClass()
     class CurrentAccount(Ice.Value):
@@ -207,7 +262,7 @@ if 'CurrentAccount' not in _M_com.jimi.api.__dict__:
         oid -- 机构id
         platform -- 平台code
         """
-        def __init__(self, uid=0, oid=0, platform=''):
+        def __init__(self, uid='', oid='', platform=''):
             self.uid = uid
             self.oid = oid
             self.platform = platform
@@ -225,8 +280,8 @@ if 'CurrentAccount' not in _M_com.jimi.api.__dict__:
         __repr__ = __str__
 
     _M_com.jimi.api._t_CurrentAccount = IcePy.defineValue('::com::jimi::api::CurrentAccount', CurrentAccount, -1, (), False, False, None, (
-        ('uid', (), IcePy._t_long, False, 0),
-        ('oid', (), IcePy._t_long, False, 0),
+        ('uid', (), IcePy._t_string, False, 0),
+        ('oid', (), IcePy._t_string, False, 0),
         ('platform', (), IcePy._t_string, False, 0)
     ))
     CurrentAccount._ice_type = _M_com.jimi.api._t_CurrentAccount

@@ -12,7 +12,7 @@ class OrganizationType(mytest.MyOrganizationType):
         printer = self.organizationtype.OrganizationTypeApiPrx.checkedCast(self.base)
         if not printer:
             raise RuntimeError("Invalid proxy")
-        code = 'TUQIANG'
+        code = 'Department'
         logger.info('调用existsByCode接口，发送参数code:{}'.format(code))
         try:
             r = printer.existsByCode(code)
@@ -25,7 +25,7 @@ class OrganizationType(mytest.MyOrganizationType):
         printer = self.organizationtype.OrganizationTypeApiPrx.checkedCast(self.base)
         if not printer:
             raise RuntimeError("Invalid proxy")
-        organizationtype_info = self.organizationtype_dto.OrganizationTypeInputDTO(operator=0, platform='TUQIANG', code='Agent1', name='代理商1')
+        organizationtype_info = self.organizationtype_dto.OrganizationTypeInputDTO(operator='0', platform='TUQIANG', code='group', name='小组')
         logger.info('调用addOrganizationType接口，发送参数organizationtype_info:{}'.format(organizationtype_info))
         try:
             r = printer.addOrganizationType(organizationtype_info)
@@ -33,15 +33,15 @@ class OrganizationType(mytest.MyOrganizationType):
         except Exception as e:
             logger.error('fail，错误：{}'.format(e))
 
-    def test_update_platform(self):
+    def test_update_organizationtype(self):
         """更新机构类型"""
         printer = self.organizationtype.OrganizationTypeApiPrx.checkedCast(self.base)
         if not printer:
             raise RuntimeError("Invalid proxy")
-        organizationtype_info = self.organizationtype_dto.OrganizationTypeInputDTO(operator=0, platform='TUQIANG1', code='Agent1', name='代理商11')
-        logger.info('调用updatePlatform接口，发送参数organizationtype_info:{}'.format(organizationtype_info))
+        organizationtype_info = self.organizationtype_dto.OrganizationTypeInputDTO(operator='0', platform='CESHI', code='Agent', name='代理商12')
+        logger.info('调用updateOrganizationType接口，发送参数organizationtype_info:{}'.format(organizationtype_info))
         try:
-            r = printer.updatePlatform(organizationtype_info)
+            r = printer.updateOrganizationType(organizationtype_info)
             logger.info('success，返回：{}'.format(r))
         except Exception as e:
             logger.error('fail，错误：{}'.format(e))
@@ -51,7 +51,7 @@ class OrganizationType(mytest.MyOrganizationType):
         printer = self.organizationtype.OrganizationTypeApiPrx.checkedCast(self.base)
         if not printer:
             raise RuntimeError("Invalid proxy")
-        platform = 'TUQIANG1'
+        platform = 'CESHI'
         pagesize =10
         pagenum = 0
         logger.info('调用findOrganizationTypeByPlatform接口，发送参数：platform:{},pagenum:{},pagesize{}'.format(platform, pagenum, pagesize))
@@ -79,10 +79,10 @@ class OrganizationType(mytest.MyOrganizationType):
         printer = self.organizationtype.OrganizationTypeApiPrx.checkedCast(self.base)
         if not printer:
             raise RuntimeError("Invalid proxy")
-        code = 'Agent1'
-        logger.info('调用deletePlatformBy接口，发送参数：code:{}'.format(code))
+        code = 'Agent'
+        logger.info('调用deleteOrganizationTypeBy接口，发送参数：code:{}'.format(code))
         try:
-            r = printer.deletePlatformBy(self.account, code)
+            r = printer.deleteOrganizationTypeBy(self.account, code)
             logger.info('success，返回：{}'.format(r))
         except Exception as e:
             logger.error('fail，错误：{}'.format(e))

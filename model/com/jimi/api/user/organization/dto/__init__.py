@@ -6,5 +6,8 @@ Ice.updateModule("com.jimi.api.user.organization.dto")
 
 # Modules:
 import organization_type_dto_ice
+import organization_account_dto_ice
+import organization_info_dto_ice
+import organization_role_dto_ice
 
 # Submodules:

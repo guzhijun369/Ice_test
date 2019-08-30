@@ -12,7 +12,7 @@ class Platform(mytest.MyPlatform):
         printer = self.platform.PlatformApiPrx.checkedCast(self.base)
         if not printer:
             raise RuntimeError("Invalid proxy")
-        platform_info = self.platform_dto.PlatformInputDTO(operator=0, platform='', code='SHANCHU', name='测试平台', address='www.baidu.com',
+        platform_info = self.platform_dto.PlatformInputDTO(operator='0', platform='', code='SHANCHU', name='测试平台', address='www.baidu.com',
                                                   desc='这是一个测试平台')
         logger.info('调用addPlatform接口，发送参数platform_info:{}'.format(platform_info))
         try:
@@ -27,8 +27,8 @@ class Platform(mytest.MyPlatform):
         if not printer:
             raise RuntimeError("Invalid proxy")
         # 平台里code是唯一标识
-        platform_info = self.platform_dto.PlatformInputDTO(operator=0, platform='', code='CESHI', name='测试平台1', address='www.baidu.com1',
-                                                  desc='这是一个测试平台1')
+        platform_info = self.platform_dto.PlatformInputDTO(operator='0', platform='', code='CESHI', name='测试平台', address='www.baidu.com',
+                                                  desc='这是一个测试平台')
         logger.info('调用addPlatform接口，发送参数platform_info:{}'.format(platform_info))
         try:
             r = printer.updatePlatform(platform_info)
@@ -112,7 +112,7 @@ class Application(mytest.MyApplication):
         if not printer:
             raise RuntimeError("Invalid proxy")
         push = self.platform_dto.ClientDTO()
-        application_info = self.platform_dto.PlatformAppInputDTO(operator=0, platform='CESHI', appId='2341', icon='https://tubiao.com', name='测试APP', type=1, code='CESHIAPP',
+        application_info = self.platform_dto.PlatformAppInputDTO(operator='0', platform='CESHI', appId='2341', icon='https://tubiao.com', name='测试APP', type=1, code='CESHIAPP',
                                                         domain='ceshi.com', contact='谷志军22', production=False, smsId='086', push=push)
         logger.info('调用addApplication类接口，发送参数:platform_app_info:{}'.format(application_info))
         try:
@@ -128,8 +128,8 @@ class Application(mytest.MyApplication):
             raise RuntimeError("Invalid proxy")
         # 平台里appID是唯一标识
         push = self.platform_dto.ClientDTO()
-        application_info = self.platform_dto.PlatformAppInputDTO(operator=0, platform='CESHI', appId='4b5029508c56419c', icon='https://tubiao.com1', name='测试APP1', type=1, code='CESHIAPP',
-                                                        domain='ceshi.com1', contact='谷志军11', production=False, smsId='0861', push=push)
+        application_info = self.platform_dto.PlatformAppInputDTO(operator='0', platform='CESHI', appId='ffebaf59032f49ac', icon='https://tubiao.com', name='测试APP', type=1, code='CESHIAPP',
+                                                        domain='ceshi.com', contact='谷志军', production=False, smsId='0861', push=push)
         logger.info('调用updateApplication类接口，发送参数:platform_app_info:{}'.format(application_info))
         try:
             r = printer.updateApplication(self.account, application_info)
@@ -142,7 +142,7 @@ class Application(mytest.MyApplication):
         printer = self.platform.ApplicationApiPrx.checkedCast(self.base)
         if not printer:
             raise RuntimeError("Invalid proxy")
-        platform_appid = '613b1cb2879b4711'  # appID
+        platform_appid = '4b5029508c56419c'  # appID
         logger.info('调用deleteApplicationBy类接口，发送参数:platform_appid:{}'.format(platform_appid))
         try:
             r = printer.deleteApplicationBy(self.account, platform_appid)
@@ -169,7 +169,7 @@ class Application(mytest.MyApplication):
         printer = self.platform.ApplicationApiPrx.checkedCast(self.base)
         if not printer:
             raise RuntimeError("Invalid proxy")
-        platform_appid = '4b5029508c56419c'
+        platform_appid = 'ffebaf59032f49ac'
         logger.info('调用getApplicationByAppId接口，发送参数：platform_appid:{}'.format(platform_appid))
         try:
             r = printer.getApplicationByAppId(platform_appid)
@@ -182,7 +182,7 @@ class Application(mytest.MyApplication):
         printer = self.platform.ApplicationApiPrx.checkedCast(self.base)
         if not printer:
             raise RuntimeError("Invalid proxy")
-        platform_appid = '4b5029508c56419c'
+        platform_appid = 'ffebaf59032f49ac'
         logger.info('调用resetApplicationClientSecret类接口，发送参数platform_appid：{}'.format(platform_appid))
         try:
             r = printer.resetApplicationClientSecret(self.account, platform_appid)
@@ -195,7 +195,7 @@ class Application(mytest.MyApplication):
         printer = self.platform.ApplicationApiPrx.checkedCast(self.base)
         if not printer:
             raise RuntimeError("Invalid proxy")
-        platform_appid = '4b5029508c56419c'
+        platform_appid = 'ffebaf59032f49ac'
         logger.info('调用lookupApplicationClientSecret类接口，发送参数platform_appid：{}'.format(platform_appid))
         try:
             r = printer.lookupApplicationClientSecret(platform_appid)

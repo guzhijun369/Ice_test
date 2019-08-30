@@ -2,7 +2,8 @@ import unittest
 import time
 from loguru import logger
 import os
-from testcase import test_platform, test_organization, test_systemmember, test_organization_type
+from testcase import test_platform, test_organization_account, test_systemmember, test_organization_type, test_organization_info
+from testcase import test_organization_role, test_appuser
 
 
 path = os.path.join(os.path.abspath('.'), 'log\\','test_{}.log'.format(time.strftime('%Y-%m-%d')))
@@ -23,5 +24,5 @@ def run(method, test=None):
         runner.run(suit)
 
 if __name__ == '__main__':
-    run('one', test_organization_type.OrganizationType("test_delete_organizationtype"))  # 指定执行哪一条，第二个参数为：用例文件名.类方法(用例名称)
+    run('one', test_appuser.AppUser("test_login_auth"))  # 指定执行哪一条，第二个参数为：用例文件名.类方法(用例名称)
     # run('all') # 执行全部
