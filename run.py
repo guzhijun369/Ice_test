@@ -16,8 +16,8 @@ def run(method, test=None):
         test_dir = './testcase'
         suite = unittest.defaultTestLoader.discover(start_dir=test_dir, pattern='test_*.py')
         unittest.TextTestRunner(verbosity=2).run(suite)
-    if method == 'one':
     # 执行单条
+    if method == 'one':
         suit = unittest.TestSuite()
         suit.addTest(test)  # 把这个类中需要执行的测试用例加进去，有多条再加即可
         runner = unittest.TextTestRunner()
